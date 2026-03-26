@@ -28,7 +28,7 @@ export default function App() {
   const navigate = useNavigate()
 
   return (
-    <div className="relative w-full min-h-[100dvh] overflow-x-hidden overflow-y-auto bg-[#0a0a0a] flex flex-col font-sans text-white">
+    <div className="relative w-full min-h-[100dvh] overflow-x-hidden bg-[#0a0a0a] flex flex-col font-sans text-white">
       <ParticleBackground />
 
       {/* Optimized Ambient glow blobs - Removed mix-blend-screen to fix fps stutter */}
@@ -155,7 +155,7 @@ export default function App() {
               <div className="absolute top-0 left-[-100%] w-[50%] h-full bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-[-20deg] group-hover:left-[200%] transition-all duration-1000 ease-in-out" />
 
               <div className="text-center md:text-left relative z-10 w-full md:w-auto">
-                <p className="text-lg md:text-xl font-black text-white leading-tight mb-1 tracking-tight">Únete a nuestra comunidad</p>
+                <p className="text-lg md:text-xl font-semibold text-white leading-tight mb-1 tracking-tight">Únete a nuestra comunidad</p>
                 <p className="text-xs md:text-sm text-white/70 font-medium">Aprende IA & automatización con nosotros</p>
               </div>
               <motion.button
