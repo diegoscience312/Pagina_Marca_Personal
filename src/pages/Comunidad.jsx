@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import ParticleBackground from '../components/ParticleBackground'
@@ -19,6 +20,11 @@ const testimonials = [
 
 export default function Comunidad() {
   const navigate = useNavigate()
+
+  // Ensure page always starts at the top
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div
