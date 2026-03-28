@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import ParticleBackground from '../components/ParticleBackground'
+import ToolIcon from '../components/ToolIcon'
+
+const tools = ['Claude AI', 'n8n', 'ManyChat', 'OpenCLAW', 'Antigravity', 'Higgsfield']
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -47,8 +50,24 @@ export default function Comunidad() {
           <p className="text-white/50 text-sm mt-2">Elige el plan que se adapta a ti</p>
         </motion.div>
 
-        {/* Plans */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+        {/* ── TOOLS ── */}
+        <motion.div {...fadeUp(0.15)} className="w-full mb-8">
+          <div
+            className="rounded-[1.25rem] px-5 py-5 md:py-6 relative overflow-hidden group shadow-xl"
+            style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', backdropFilter: 'blur(8px)' }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+            <p className="text-xs text-white/40 uppercase tracking-[0.2em] text-center mb-0 font-bold">HERRAMIENTAS QUE ENSEÑAMOS</p>
+            <div className="flex justify-between md:justify-around items-end gap-3 md:gap-2 overflow-x-auto pt-6 pb-2 md:pb-0 hide-scrollbar" style={{ scrollbarWidth: 'none' }}>
+              {tools.map((tool, i) => (
+                <ToolIcon key={tool} name={tool} delay={i * 0.1} />
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Plans & Resources */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 mb-8 items-stretch">
 
           {/* Free */}
           <motion.div {...fadeUp(0.2)}>
@@ -80,18 +99,15 @@ export default function Comunidad() {
                   </li>
                 ))}
               </ul>
-              <motion.a
-                whileHover={{ scale: 1.03, boxShadow: '0 0 24px rgba(20,184,166,0.5)' }}
-                whileTap={{ scale: 0.97 }}
-                href="#"
-                className="block text-center py-2.5 rounded-xl text-sm font-bold text-white no-underline"
+              <motion.div
+                className="w-full text-center px-6 py-3 rounded-xl text-sm font-bold text-white/60 cursor-not-allowed mt-auto"
                 style={{
-                  background: 'linear-gradient(135deg, #14b8a6, #0d9488)',
-                  boxShadow: '0 0 16px rgba(20,184,166,0.3)',
+                  background: 'rgba(20,184,166,0.1)',
+                  border: '1px solid rgba(20,184,166,0.2)',
                 }}
               >
-                Unirse gratis
-              </motion.a>
+                Próximamente
+              </motion.div>
             </div>
           </motion.div>
 
@@ -135,17 +151,66 @@ export default function Comunidad() {
                   </li>
                 ))}
               </ul>
-              <motion.a
-                whileHover={{ scale: 1.03, boxShadow: '0 0 30px rgba(139,92,246,0.65)' }}
-                whileTap={{ scale: 0.97 }}
-                href="#"
-                className="block text-center py-2.5 rounded-xl text-sm font-bold text-white no-underline"
+              <motion.div
+                className="w-full text-center px-6 py-3 rounded-xl text-sm font-bold text-white/60 cursor-not-allowed mt-auto"
                 style={{
-                  background: 'linear-gradient(135deg, #8b5cf6, #6d28d9)',
-                  boxShadow: '0 0 20px rgba(139,92,246,0.4)',
+                  background: 'rgba(139,92,246,0.1)',
+                  border: '1px solid rgba(139,92,246,0.2)',
                 }}
               >
-                Unirse ahora →
+                Próximamente
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Guides (New Card) */}
+          <motion.div {...fadeUp(0.4)} className="h-full">
+            <div
+              className="rounded-2xl p-5 h-full flex flex-col relative overflow-hidden group"
+              style={{
+                background: 'rgba(59,130,246,0.06)',
+                border: '1px solid rgba(59,130,246,0.25)',
+                boxShadow: '0 0 25px rgba(59,130,246,0.08)',
+                backdropFilter: 'blur(12px)',
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+              <div className="mb-3 relative z-10">
+                <span className="text-[10px] font-bold text-blue-400 uppercase tracking-widest flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-[pulse_1.5s_ease-in-out_Infinity] shadow-[0_0_8px_rgba(59,130,246,0.8)]" />
+                  Guías
+                </span>
+                <h2 className="text-lg font-bold text-white mt-1 leading-tight">Guías gratuitas de IA y automatización</h2>
+                <p className="text-xs text-white/60 mt-1.5 leading-relaxed text-balance">
+                  Claude Code, ManyChat, n8n y más.
+                </p>
+              </div>
+              <ul className="flex flex-col gap-2 mb-5 flex-1 relative z-10">
+                {[
+                  'Acceso a todos los prompts',
+                  'Workflows de n8n descargables',
+                  'Documentación explicada',
+                  'Nuevas guías mensualmente',
+                ].map((b, idx) => (
+                  <li key={idx} className="flex items-center gap-2 text-xs text-white/65">
+                    <span className="text-blue-400 font-bold">✓</span> {b}
+                  </li>
+                ))}
+              </ul>
+              <motion.a
+                whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(59,130,246,0.6)' }}
+                whileTap={{ scale: 0.95 }}
+                href="https://drive.google.com/drive/folders/12igbqQZNA4TUabgyqmsawifVwiw-VehV?usp=share_link"
+                target="_blank"
+                rel="noreferrer"
+                className="w-full block text-center px-6 py-3 rounded-xl text-sm font-bold text-white no-underline mt-auto relative z-10"
+                style={{
+                  background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+                  boxShadow: '0 0 15px rgba(59,130,246,0.3)',
+                }}
+              >
+                Ver guías →
               </motion.a>
             </div>
           </motion.div>

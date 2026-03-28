@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
 
 const toolImages = {
-  'Claude AI':  '/images/claude.png',
-  'n8n':        '/images/n8n.png',
-  'ManyChat':   '/images/manychat.png',
-  'CapCut':     '/images/capcut.png',
-  'Wavvy':      '/images/weavy.png',
-  'Higgsfield': '/images/Higgsfield.png',
+  'Claude AI':   '/images/claude.png',
+  'n8n':         '/images/n8n.png',
+  'ManyChat':    '/images/manychat.png',
+  'OpenCLAW':    '/images/openclaw.png',
+  'Antigravity': '/images/antigravity.png',
+  'Higgsfield':  '/images/higgsfield.png',
 }
 
 export default function ToolIcon({ name, delay = 0 }) {
