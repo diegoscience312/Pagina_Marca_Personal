@@ -182,61 +182,40 @@ export default function App() {
             </div>
           </motion.div>
 
-          {/* ── LATEST CONTENT ── */}
-          <motion.div variants={itemVariants} className="flex flex-col md:flex-row gap-4 w-full">
-            {/* Reels */}
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="flex-1 rounded-[1.25rem] p-4 md:p-5 flex flex-col shadow-2xl transition-all duration-300 min-h-[120px] md:min-h-[140px] relative overflow-hidden group"
+          {/* Card - Guias Gratuitas */}
+          <motion.div variants={itemVariants} className="w-full" whileHover={{ y: -5 }}>
+            <div
+              className="rounded-[1.25rem] p-5 md:p-6 flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden group shadow-2xl transition-all duration-300"
               style={{
                 background: 'linear-gradient(135deg, rgba(59,130,246,0.1), rgba(0,0,0,0))',
-                border: '1px solid rgba(59,130,246,0.2)',
-                boxShadow: '0 10px 40px -10px rgba(59,130,246,0.1)',
-                backdropFilter: 'blur(8px)'
+                border: '1px solid rgba(59,130,246,0.3)',
+                boxShadow: '0 10px 40px -10px rgba(59,130,246,0.15)',
+                backdropFilter: 'blur(12px)',
               }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-              <p className="text-[11px] md:text-xs text-blue-400 uppercase tracking-wider font-bold mb-3 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-[pulse_1.5s_ease-in-out_Infinity] shadow-[0_0_8px_rgba(59,130,246,0.8)]" />
-                ÚLTIMOS REELS
-              </p>
-              <div className="grid grid-cols-1 gap-3 flex-1 relative z-10">
-                <div>
-                  <ContentCard
-                    label="Locked in 🔒"
-                    image="/images/ig.jpg"
-                    link="https://www.instagram.com/reel/DWaloxDTf_d/?igsh=ZG92YzE4MXRuaXNz"
-                  />
-                </div>
-              </div>
-            </motion.div>
+              <div className="absolute top-0 left-[-100%] w-[200%] h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-[-20deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
-            {/* TikToks */}
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="flex-1 rounded-[1.25rem] p-4 md:p-5 flex flex-col shadow-2xl transition-all duration-300 min-h-[120px] md:min-h-[140px] relative overflow-hidden group"
-              style={{
-                background: 'linear-gradient(135deg, rgba(139,92,246,0.1), rgba(0,0,0,0))',
-                border: '1px solid rgba(139,92,246,0.2)',
-                boxShadow: '0 10px 40px -10px rgba(139,92,246,0.1)',
-                backdropFilter: 'blur(8px)'
-              }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-              <p className="text-[11px] md:text-xs text-violet-400 uppercase tracking-wider font-bold mb-3 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-violet-500 animate-[pulse_1.5s_ease-in-out_Infinity] shadow-[0_0_8px_rgba(139,92,246,0.8)]" />
-                ÚLTIMOS TIKTOKS
-              </p>
-              <div className="grid grid-cols-1 gap-3 flex-1 relative z-10">
-                <div>
-                  <ContentCard
-                    label="Computer use y dispatch - Claude"
-                    image="/images/tt.jpg"
-                    link="https://vt.tiktok.com/ZSHJkhpXP/"
-                  />
-                </div>
+              <div className="text-center md:text-left relative z-10 w-full md:w-auto flex-1">
+                <p className="text-lg md:text-xl font-bold text-white leading-tight mb-1.5 flex items-center justify-center md:justify-start gap-2">
+                  <span className="text-blue-400 text-xl font-bold block scale-110">📚</span>
+                  Guías gratuitas de IA y automatización
+                </p>
+                <p className="text-xs md:text-sm text-blue-100/70 font-medium">Acceso a todos los prompts, workflows de n8n descargables, documentación explicada, etc.</p>
               </div>
-            </motion.div>
+              <motion.button
+                whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(59,130,246,0.5)' }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => window.open('https://drive.google.com/drive/folders/12igbqQZNA4TUabgyqmsawifVwiw-VehV?usp=share_link', '_blank')}
+                className="w-full md:w-[240px] flex-shrink-0 px-6 py-3 rounded-xl text-sm font-bold text-white cursor-pointer relative z-10 transition-shadow duration-300"
+                style={{
+                  background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+                  boxShadow: '0 0 15px rgba(59,130,246,0.3)',
+                  border: 'none',
+                }}
+              >
+                Ver guías →
+              </motion.button>
+            </div>
           </motion.div>
 
         </motion.div>

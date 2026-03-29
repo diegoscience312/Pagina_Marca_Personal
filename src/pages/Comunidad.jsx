@@ -130,7 +130,7 @@ export default function Comunidad() {
         </motion.div>
 
         {/* Plans & Resources */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 mb-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 mb-8 items-stretch">
 
           {/* Free */}
           <motion.div {...fadeUp(0.2)}>
@@ -225,60 +225,7 @@ export default function Comunidad() {
               </motion.div>
             </div>
           </motion.div>
-
-          {/* Guides (New Card) */}
-          <motion.div {...fadeUp(0.4)} className="h-full">
-            <div
-              className="rounded-2xl p-5 h-full flex flex-col relative overflow-hidden group"
-              style={{
-                background: 'rgba(59,130,246,0.06)',
-                border: '1px solid rgba(59,130,246,0.25)',
-                boxShadow: '0 0 25px rgba(59,130,246,0.08)',
-                backdropFilter: 'blur(12px)',
-              }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-
-              <div className="mb-3 relative z-10">
-                <span className="text-[10px] font-bold text-blue-400 uppercase tracking-widest flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-[pulse_1.5s_ease-in-out_Infinity] shadow-[0_0_8px_rgba(59,130,246,0.8)]" />
-                  Guías
-                </span>
-                <h2 className="text-lg font-bold text-white mt-1 leading-tight">Guías gratuitas de IA y automatización</h2>
-                <p className="text-xs text-white/60 mt-1.5 leading-relaxed text-balance">
-                  Claude Code, ManyChat, n8n y más.
-                </p>
-              </div>
-              <ul className="flex flex-col gap-2 mb-5 flex-1 relative z-10">
-                {[
-                  'Acceso a todos los prompts',
-                  'Workflows de n8n descargables',
-                  'Documentación explicada',
-                  'Nuevas guías mensualmente',
-                ].map((b, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-xs text-white/65">
-                    <span className="text-blue-400 font-bold">✓</span> {b}
-                  </li>
-                ))}
-              </ul>
-              <motion.a
-                whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(59,130,246,0.6)' }}
-                whileTap={{ scale: 0.95 }}
-                href="https://drive.google.com/drive/folders/12igbqQZNA4TUabgyqmsawifVwiw-VehV?usp=share_link"
-                target="_blank"
-                rel="noreferrer"
-                className="w-full block text-center px-6 py-3 rounded-xl text-sm font-bold text-white no-underline mt-auto relative z-10"
-                style={{
-                  background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
-                  boxShadow: '0 0 15px rgba(59,130,246,0.3)',
-                }}
-              >
-                Ver guías →
-              </motion.a>
-            </div>
-          </motion.div>
         </div>
-
 
         <div className="pb-8" />
       </div>
