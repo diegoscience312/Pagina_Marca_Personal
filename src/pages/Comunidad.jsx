@@ -55,6 +55,7 @@ export default function Comunidad() {
 
         {/* Instructors */}
         <motion.div {...fadeUp(0.12)} className="w-full mb-8 flex flex-col items-center">
+          <p className="text-[10px] md:text-xs text-white/40 uppercase tracking-[0.2em] text-center mb-8 font-bold">IMPARTIDO POR:</p>
           
           <div className="relative flex flex-col md:flex-row justify-center md:items-stretch w-full max-w-[850px] gap-12 md:gap-0">
             
