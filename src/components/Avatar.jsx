@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-export default function Avatar({ name, delay = 0 }) {
+export default function Avatar({ name, delay = 0, small = false }) {
   const isMateo = name.includes('Mateo')
   const imgSrc = isMateo ? '/images/Mateo.jpg' : '/images/ortegoat.jpg'
 
@@ -12,7 +12,7 @@ export default function Avatar({ name, delay = 0 }) {
       whileHover={{ scale: 1.05 }}
     >
       <div
-        className="w-32 h-32 md:w-40 md:h-40 rounded-full flex items-center justify-center relative overflow-hidden"
+        className={`${small ? 'w-20 h-20 md:w-24 md:h-24' : 'w-32 h-32 md:w-40 md:h-40'} rounded-full flex items-center justify-center relative overflow-hidden`}
         style={{
           background: isMateo
             ? 'linear-gradient(135deg, #8b5cf6, #6d28d9)'

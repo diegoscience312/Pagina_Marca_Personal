@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import ParticleBackground from '../components/ParticleBackground'
 import ToolIcon from '../components/ToolIcon'
+import Avatar from '../components/Avatar'
+import SocialLinks from '../components/SocialLinks'
 
 const tools = ['Claude AI', 'n8n', 'ManyChat', 'OpenCLAW', 'Antigravity', 'Higgsfield']
 
@@ -12,11 +14,6 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.55, delay, ease: 'easeOut' },
 })
 
-const testimonials = [
-  { name: 'Carlos M.', role: 'Emprendedor', quote: 'Aprendí a automatizar todo mi negocio en semanas. El nivel de las clases es increíble.' },
-  { name: 'Sofía R.', role: 'Content Creator', quote: 'Los videos de Mateo me cambiaron la vida. Ahora produzco contenido 3x más rápido con IA.' },
-  { name: 'Andrés P.', role: 'Developer', quote: 'La comunidad PRO vale cada peso. El acceso directo a Diego y Mateo es invaluable.' },
-]
 
 export default function Comunidad() {
   const navigate = useNavigate()
@@ -54,6 +51,65 @@ export default function Comunidad() {
         <motion.div {...fadeUp(0.1)} className="text-center mb-8">
           <h1 className="text-2xl font-bold text-gradient leading-tight">Nuestra Comunidad</h1>
           <p className="text-white/50 text-sm mt-2">Elige el plan que se adapta a ti</p>
+        </motion.div>
+
+        {/* Instructors */}
+        <motion.div {...fadeUp(0.12)} className="w-full mb-8 flex flex-col items-center">
+          
+          <div className="relative flex flex-col md:flex-row justify-center md:items-stretch w-full max-w-[850px] gap-12 md:gap-0">
+            
+            {/* Dividing Vertical Line and Clockwise Spinning & (Desktop) */}
+            <div className="hidden md:flex absolute left-1/2 top-[10%] bottom-[10%] w-[1px] bg-white/10 -translate-x-1/2 z-0 items-center justify-center">
+              <motion.div 
+                className="bg-[#0a0a0a] w-8 h-8 flex items-center justify-center text-white/30 font-serif text-sm select-none"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
+              >
+                &
+              </motion.div>
+            </div>
+
+            {/* Dividing Horizontal Line and Clockwise Spinning & (Mobile) */}
+            <div className="flex md:hidden absolute top-1/2 left-[10%] right-[10%] h-[1px] bg-white/10 -translate-y-1/2 z-0 items-center justify-center">
+              <motion.div 
+                className="bg-[#0a0a0a] px-2 flex items-center justify-center text-white/30 font-serif text-sm select-none"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
+              >
+                &
+              </motion.div>
+            </div>
+
+            {/* Left Col - Diego */}
+            <div className="flex-1 flex flex-col items-center text-center px-4">
+              <Avatar name="Diego Ortega" delay={0} small />
+              <p className="text-xl md:text-[22px] font-bold text-white mt-5 mb-1 tracking-wide">Diego Ortega</p>
+              <p className="text-sm text-white/50 mb-5 max-w-[180px] leading-relaxed">
+                Automatizaciones IA &<br/>Claude Code
+              </p>
+              <SocialLinks
+                instagram="@ortegoat"
+                tiktok="@ortegoat8"
+                instagramUrl="https://instagram.com/ortegoat"
+                tiktokUrl="https://tiktok.com/@ortegoat8"
+              />
+            </div>
+
+            {/* Right Col - Mateo */}
+            <div className="flex-1 flex flex-col items-center text-center px-4 relative">
+              <Avatar name="Mateo Cerrillo" delay={0.2} small />
+              <p className="text-xl md:text-[22px] font-bold text-white mt-5 mb-1 tracking-wide">Mateo Cerrillo</p>
+              <p className="text-sm text-white/50 mb-5 max-w-[180px] leading-relaxed">
+                Contenido UGC, Videos &<br/>Claude Code
+              </p>
+              <SocialLinks
+                instagram="@cerrillolife"
+                tiktok="@cerrillolife"
+                instagramUrl="https://instagram.com/cerrillolife"
+                tiktokUrl="https://tiktok.com/@cerrillolife"
+              />
+            </div>
+          </div>
         </motion.div>
 
         {/* ── TOOLS ── */}
@@ -222,40 +278,6 @@ export default function Comunidad() {
           </motion.div>
         </div>
 
-        {/* Testimonials */}
-        <motion.div {...fadeUp(0.4)}>
-          <p className="text-[10px] text-white/30 uppercase tracking-widest text-center mb-4 font-semibold">Lo que dice la comunidad</p>
-          <div className="flex flex-col gap-3">
-            {testimonials.map((t, i) => (
-              <motion.div
-                key={t.name}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 + i * 0.1 }}
-              >
-                <div
-                  className="rounded-xl p-4 flex items-start gap-3"
-                  style={{
-                    background: 'rgba(255,255,255,0.03)',
-                    border: '1px solid rgba(255,255,255,0.07)',
-                    backdropFilter: 'blur(8px)',
-                  }}
-                >
-                  <div
-                    className="w-9 h-9 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold"
-                    style={{ background: `hsl(${i * 80 + 200}, 60%, 40%)` }}
-                  >
-                    {t.name.split(' ').map(n => n[0]).join('')}
-                  </div>
-                  <div>
-                    <p className="text-xs text-white font-semibold">{t.name} <span className="text-white/35 font-normal">· {t.role}</span></p>
-                    <p className="text-xs text-white/55 mt-0.5 leading-relaxed">"{t.quote}"</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
 
         <div className="pb-8" />
       </div>
