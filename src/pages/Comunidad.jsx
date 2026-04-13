@@ -152,7 +152,7 @@ export default function Comunidad() {
               </div>
               <ul className="flex flex-col gap-2 mb-5 flex-1">
                 {[
-                  'Acceso al Discord comunitario',
+                  'Acceso al Skool comunitario',
                   'Recursos y templates gratuitos',
                   'Tips semanales de IA',
                   'Preguntas en canales públicos',
@@ -162,15 +162,19 @@ export default function Comunidad() {
                   </li>
                 ))}
               </ul>
-              <motion.div
-                className="w-full text-center px-6 py-3 rounded-xl text-sm font-bold text-white/60 cursor-not-allowed mt-auto"
+              <motion.button
+                whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(20,184,166,0.5)' }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => window.open('https://www.skool.com/the-grid-5633', '_blank')}
+                className="w-full text-center px-6 py-3 rounded-xl text-sm font-bold text-white cursor-pointer mt-auto"
                 style={{
-                  background: 'rgba(20,184,166,0.1)',
-                  border: '1px solid rgba(20,184,166,0.2)',
+                  background: 'linear-gradient(135deg, #14b8a6, #0d9488)',
+                  boxShadow: '0 0 15px rgba(20,184,166,0.3)',
+                  border: 'none',
                 }}
               >
-                Próximamente
-              </motion.div>
+                Únete gratis →
+              </motion.button>
             </div>
           </motion.div>
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import App from './App.jsx'
 import Comunidad from './pages/Comunidad.jsx'
 import './index.css'
@@ -13,5 +14,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/comunidad" element={<Comunidad />} />
       </Routes>
     </BrowserRouter>
+    <Analytics />
   </React.StrictMode>,
 )
