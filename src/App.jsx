@@ -133,7 +133,7 @@ export default function App() {
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(20,184,166,0.5)' }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => window.open('https://nexus-ai-lac-nu.vercel.app', '_blank')}
+                onClick={() => window.open('https://www.nexusaimx.lat', '_blank')}
                 className="w-full md:w-[240px] flex-shrink-0 px-6 py-3 rounded-xl text-sm font-bold text-white cursor-pointer relative z-10 transition-shadow duration-300"
                 style={{
                   background: 'linear-gradient(135deg, #14b8a6, #06b6d4)',
