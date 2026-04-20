@@ -86,7 +86,7 @@ export default function Comunidad() {
               <Avatar name="Diego Ortega" delay={0} small />
               <p className="text-xl md:text-[22px] font-bold text-white mt-5 mb-1 tracking-wide">Diego Ortega</p>
               <p className="text-sm text-white/50 mb-5 max-w-[180px] leading-relaxed">
-                Automatizaciones IA &<br/>Claude Code
+                Agencia IA & Automatización
               </p>
               <SocialLinks
                 instagram="@ortegoat"

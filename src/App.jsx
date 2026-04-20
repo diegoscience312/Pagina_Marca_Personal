@@ -61,7 +61,7 @@ export default function App() {
               <div className="text-center flex flex-col gap-2">
                 <p className="text-2xl md:text-3xl font-bold text-white leading-tight tracking-wide">Diego Ortega</p>
                 <p className="text-sm md:text-base text-white/70 leading-relaxed max-w-[320px] mx-auto text-balance">
-                  Te enseño a usar IA y automatización para trabajar menos y ganar más.
+                  Co-fundador de agencia IA. Lo que implemento, te lo enseño.
                 </p>
               </div>
               <SocialLinks
@@ -89,7 +89,7 @@ export default function App() {
               <div className="text-center md:text-left relative z-10 w-full md:w-auto flex-1">
                 <p className="text-lg md:text-xl font-bold text-white leading-tight mb-1.5 flex items-center justify-center md:justify-start gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-purple-400 animate-pulse shadow-[0_0_10px_rgba(167,139,250,0.8)]" />
-                  Aprende IA — únete gratis
+                  🎓 Aprende IA — únete gratis
                 </p>
                 <p className="text-xs md:text-sm text-purple-100/70 font-medium text-balance">Comunidad de creadores y emprendedores que usan IA</p>
               </div>
@@ -114,9 +114,9 @@ export default function App() {
             <div
               className="rounded-[1.25rem] p-5 md:p-6 flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden group shadow-2xl transition-all duration-300"
               style={{
-                background: 'linear-gradient(135deg, rgba(30,58,138,0.4), rgba(88,28,135,0.2))',
-                border: '1px solid rgba(59,130,246,0.4)',
-                boxShadow: '0 10px 40px -10px rgba(59,130,246,0.3)',
+                background: 'linear-gradient(135deg, rgba(20,184,166,0.15), rgba(13,148,136,0.05))',
+                border: '1px solid rgba(20,184,166,0.3)',
+                boxShadow: '0 10px 40px -10px rgba(20,184,166,0.15)',
                 backdropFilter: 'blur(12px)',
               }}
             >
@@ -125,95 +125,23 @@ export default function App() {
 
               <div className="text-center md:text-left relative z-10 w-full md:w-auto flex-1">
                 <p className="text-lg md:text-xl font-bold text-white leading-tight mb-1.5 flex items-center justify-center md:justify-start gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse shadow-[0_0_10px_rgba(96,165,250,0.8)]" />
-                  Agencia de IA & Automatización
+                  <span className="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse shadow-[0_0_10px_rgba(20,184,166,0.8)]" />
+                  🚀 Agencia de IA & Automatización
                 </p>
-                <p className="text-xs md:text-sm text-blue-100/70 font-medium text-balance">Escalamos y optimizamos tu negocio implementando herramientas de Inteligencia Artificial.</p>
-              </div>
-              <motion.button
-                whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(59,130,246,0.6)' }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => window.open('https://nexus-ai-lac-nu.vercel.app', '_blank')}
-                className="w-full md:w-[240px] flex-shrink-0 px-6 py-3 rounded-xl text-sm font-bold text-white cursor-pointer relative z-10 transition-shadow duration-300"
-                style={{
-                  background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
-                  boxShadow: '0 0 15px rgba(59,130,246,0.4)',
-                  border: 'none',
-                }}
-              >
-                Implementa IA ahora →
-              </motion.button>
-            </div>
-          </motion.div>
-
-          {/* ── FREE RESOURCE ── */}
-          <motion.div variants={itemVariants} className="w-full" whileHover={{ y: -5 }}>
-            <div
-              className="rounded-[1.25rem] p-5 md:p-6 flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden group shadow-2xl transition-all duration-300"
-              style={{
-                background: 'linear-gradient(135deg, rgba(20,184,166,0.15), rgba(13,148,136,0.05))',
-                border: '1px solid rgba(20,184,166,0.3)',
-                boxShadow: '0 10px 40px -10px rgba(20,184,166,0.15)',
-                backdropFilter: 'blur(12px)',
-              }}
-            >
-              <div className="absolute top-0 left-[-100%] w-[200%] h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-[-20deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
-
-              <div className="text-center md:text-left relative z-10 w-full md:w-auto flex-1">
-                <p className="text-lg md:text-xl font-bold text-white leading-tight mb-1.5 flex items-center justify-center md:justify-start gap-2">
-                  <span className="text-teal-400 text-xl font-bold block scale-110">🎁</span>
-                  Guía: Escala tu negocio con IA
-                </p>
-                <p className="text-xs md:text-sm text-teal-100/70 font-medium">Guía gratis para empezar a implementar IA en tu negocio</p>
+                <p className="text-xs md:text-sm text-teal-100/70 font-medium text-balance">Escalamos y optimizamos tu negocio implementando herramientas de Inteligencia Artificial.</p>
               </div>
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(20,184,166,0.5)' }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => window.open('https://docs.google.com/document/d/13bwl3tANgX8myZJlXcxRxjyqetKhLEjA/edit?usp=sharing&ouid=104041412302112659107&rtpof=true&sd=true', '_blank')}
+                onClick={() => window.open('https://nexus-ai-lac-nu.vercel.app', '_blank')}
                 className="w-full md:w-[240px] flex-shrink-0 px-6 py-3 rounded-xl text-sm font-bold text-white cursor-pointer relative z-10 transition-shadow duration-300"
                 style={{
-                  background: 'linear-gradient(135deg, #14b8a6, #0d9488)',
-                  boxShadow: '0 0 15px rgba(20,184,166,0.3)',
-                  border: 'none',
+                  background: 'linear-gradient(135deg, #14b8a6, #06b6d4)',
+                  boxShadow: '0 0 20px rgba(20,184,166,0.5)',
+                  border: '1px solid rgba(255,255,255,0.1)',
                 }}
               >
-                Descargar gratis →
-              </motion.button>
-            </div>
-          </motion.div>
-
-          {/* Card - Guias Gratuitas */}
-          <motion.div variants={itemVariants} className="w-full" whileHover={{ y: -5 }}>
-            <div
-              className="rounded-[1.25rem] p-5 md:p-6 flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden group shadow-2xl transition-all duration-300"
-              style={{
-                background: 'linear-gradient(135deg, rgba(59,130,246,0.1), rgba(0,0,0,0))',
-                border: '1px solid rgba(59,130,246,0.3)',
-                boxShadow: '0 10px 40px -10px rgba(59,130,246,0.15)',
-                backdropFilter: 'blur(12px)',
-              }}
-            >
-              <div className="absolute top-0 left-[-100%] w-[200%] h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-[-20deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
-
-              <div className="text-center md:text-left relative z-10 w-full md:w-auto flex-1">
-                <p className="text-lg md:text-xl font-bold text-white leading-tight mb-1.5 flex items-center justify-center md:justify-start gap-2">
-                  <span className="text-blue-400 text-xl font-bold block scale-110">📚</span>
-                  Guías gratuitas de IA y automatización
-                </p>
-                <p className="text-xs md:text-sm text-blue-100/70 font-medium">Acceso a todos los prompts, workflows de n8n descargables, documentación explicada, etc.</p>
-              </div>
-              <motion.button
-                whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(59,130,246,0.5)' }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => window.open('https://drive.google.com/drive/folders/12igbqQZNA4TUabgyqmsawifVwiw-VehV?usp=share_link', '_blank')}
-                className="w-full md:w-[240px] flex-shrink-0 px-6 py-3 rounded-xl text-sm font-bold text-white cursor-pointer relative z-10 transition-shadow duration-300"
-                style={{
-                  background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
-                  boxShadow: '0 0 15px rgba(59,130,246,0.3)',
-                  border: 'none',
-                }}
-              >
-                Ver guías →
+                Implementa IA ahora →
               </motion.button>
             </div>
           </motion.div>
