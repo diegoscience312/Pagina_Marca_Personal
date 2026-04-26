@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Analytics } from '@vercel/analytics/react'
 import App from './App.jsx'
 import Comunidad from './pages/Comunidad.jsx'
+import Asesoria from './pages/Asesoria.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -12,6 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/comunidad" element={<Comunidad />} />
+        <Route path="/asesoria" element={<Asesoria />} />
       </Routes>
     </BrowserRouter>
     <Analytics />

@@ -73,6 +73,43 @@ export default function App() {
             </div>
           </motion.div>
 
+          {/* ── ASESORÍA 1:1 CARD ── */}
+          <motion.div variants={itemVariants} className="w-full" whileHover={{ y: -5 }}>
+            <div
+              className="rounded-[1.25rem] p-5 md:p-6 flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden group transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, rgba(37,99,235,0.2), rgba(29,78,216,0.08))',
+                border: '1px solid rgba(59,130,246,0.35)',
+                boxShadow: '0 10px 40px -10px rgba(37,99,235,0.2)',
+                backdropFilter: 'blur(12px)',
+              }}
+            >
+              {/* Highlight sweep effect */}
+              <div className="absolute top-0 left-[-100%] w-[200%] h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-[-20deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
+
+              <div className="text-center md:text-left relative z-10 w-full md:w-auto flex-1">
+                <p className="text-lg md:text-xl font-bold text-white leading-tight mb-1.5 flex items-center justify-center md:justify-start gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
+                  🎯 Asesoría & Consultoría 1:1
+                </p>
+                <p className="text-xs md:text-sm text-blue-100/70 font-medium text-balance">Claude Code, contenido con IA, páginas web, automatizaciones y más, te enseño lo que uso yo.</p>
+              </div>
+              <motion.button
+                whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(37,99,235,0.6)' }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => navigate('/asesoria')}
+                className="w-full md:w-[240px] flex-shrink-0 px-6 py-3 rounded-xl text-sm font-bold text-white cursor-pointer relative z-10 transition-shadow duration-300"
+                style={{
+                  background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
+                  boxShadow: '0 0 20px rgba(37,99,235,0.4)',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                }}
+              >
+                Agendar sesión →
+              </motion.button>
+            </div>
+          </motion.div>
+
           {/* ── COMMUNITY CTA ── */}
           <motion.div variants={itemVariants} className="w-full" whileHover={{ y: -5 }}>
             <div
@@ -89,7 +126,7 @@ export default function App() {
               <div className="text-center md:text-left relative z-10 w-full md:w-auto flex-1">
                 <p className="text-lg md:text-xl font-bold text-white leading-tight mb-1.5 flex items-center justify-center md:justify-start gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-purple-400 animate-pulse shadow-[0_0_10px_rgba(167,139,250,0.8)]" />
-                  🎓 Aprende IA — únete gratis
+                  🎓 Aprende IA, únete gratis
                 </p>
                 <p className="text-xs md:text-sm text-purple-100/70 font-medium text-balance">Comunidad de creadores y emprendedores que usan IA</p>
               </div>
@@ -126,7 +163,7 @@ export default function App() {
               <div className="text-center md:text-left relative z-10 w-full md:w-auto flex-1">
                 <p className="text-lg md:text-xl font-bold text-white leading-tight mb-1.5 flex items-center justify-center md:justify-start gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse shadow-[0_0_10px_rgba(20,184,166,0.8)]" />
-                  🚀 Agencia de IA & Automatización
+                  🚀 Tu negocio en piloto automático con IA
                 </p>
                 <p className="text-xs md:text-sm text-teal-100/70 font-medium text-balance">Escalamos y optimizamos tu negocio implementando herramientas de Inteligencia Artificial.</p>
               </div>
