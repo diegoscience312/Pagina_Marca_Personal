@@ -57,7 +57,7 @@ export default function Asesoria() {
         {/* Plans */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 mb-8 items-stretch">
 
-          {/* $50 */}
+          {/* $20 */}
           <motion.div {...fadeUp(0.2)}>
             <div
               className="rounded-2xl p-5 h-full flex flex-col"
@@ -70,7 +70,7 @@ export default function Asesoria() {
             >
               <div className="mb-3">
                 <div className="flex items-baseline gap-1.5 mt-1 mb-2">
-                  <span className="text-3xl font-black text-white">$50</span>
+                  <span className="text-3xl font-black text-white">$20</span>
                   <span className="text-xs text-white/40">USD</span>
                 </div>
                 <h2 className="text-lg font-bold text-white">Sesión Enfocada</h2>
@@ -94,7 +94,7 @@ export default function Asesoria() {
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(37,99,235,0.5)' }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => window.open('https://wa.me/525571729955?text=Hola%20Diego%2C%20quiero%20agendar%20una%20Sesi%C3%B3n%20Enfocada%20de%20%2450%20(30-45%20min).%20El%20tema%20que%20quiero%20aprender%20es%3A%20', '_blank')}
+                onClick={() => window.open('https://wa.me/525571729955?text=Hola%20Diego%2C%20quiero%20agendar%20una%20Sesi%C3%B3n%20Enfocada%20de%20%2420%20(30-45%20min).%20El%20tema%20que%20quiero%20aprender%20es%3A%20', '_blank')}
                 className="w-full text-center px-6 py-3 rounded-xl text-sm font-bold text-white cursor-pointer mt-auto"
                 style={{
                   background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
@@ -102,12 +102,12 @@ export default function Asesoria() {
                   border: 'none',
                 }}
               >
-                Agendar por $50 →
+                Agendar por $20 →
               </motion.button>
             </div>
           </motion.div>
 
-          {/* $100 */}
+          {/* $50 */}
           <motion.div {...fadeUp(0.3)}>
             <div
               className="rounded-2xl p-5 h-full flex flex-col relative overflow-hidden"
@@ -128,7 +128,7 @@ export default function Asesoria() {
 
               <div className="mb-3">
                 <div className="flex items-baseline gap-1.5 mt-1 mb-2">
-                  <span className="text-3xl font-black text-white">$100</span>
+                  <span className="text-3xl font-black text-white">$50</span>
                   <span className="text-xs text-white/40">USD</span>
                 </div>
                 <h2 className="text-lg font-bold text-white">Sesión Completa</h2>
@@ -153,7 +153,7 @@ export default function Asesoria() {
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(37,99,235,0.6)' }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => window.open('https://wa.me/525571729955?text=Hola%20Diego%2C%20quiero%20agendar%20una%20Sesi%C3%B3n%20Completa%20de%20%24100%20(1-1.2%20hrs).%20Los%20temas%20que%20me%20interesan%20son%3A%20', '_blank')}
+                onClick={() => window.open('https://wa.me/525571729955?text=Hola%20Diego%2C%20quiero%20agendar%20una%20Sesi%C3%B3n%20Completa%20de%20%2450%20(1-1.2%20hrs).%20Los%20temas%20que%20me%20interesan%20son%3A%20', '_blank')}
                 className="w-full text-center px-6 py-3 rounded-xl text-sm font-bold text-white cursor-pointer mt-auto"
                 style={{
                   background: 'linear-gradient(135deg, #3b82f6, #2563eb)',
@@ -161,7 +161,7 @@ export default function Asesoria() {
                   border: '1px solid rgba(255,255,255,0.1)',
                 }}
               >
-                Agendar por $100 →
+                Agendar por $50 →
               </motion.button>
             </div>
           </motion.div>
