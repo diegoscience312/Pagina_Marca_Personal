@@ -61,7 +61,7 @@ export default function Comunidad() {
             
             {/* Dividing Vertical Line and Clockwise Spinning & (Desktop) */}
             <div className="hidden md:flex absolute left-1/2 top-[10%] bottom-[10%] w-[1px] bg-white/10 -translate-x-1/2 z-0 items-center justify-center">
-              <motion.div 
+              <motion.div
                 className="bg-[#0a0a0a] w-8 h-8 flex items-center justify-center text-white/30 font-serif text-sm select-none"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
@@ -72,7 +72,7 @@ export default function Comunidad() {
 
             {/* Dividing Horizontal Line and Clockwise Spinning & (Mobile) */}
             <div className="flex md:hidden absolute top-1/2 left-[10%] right-[10%] h-[1px] bg-white/10 -translate-y-1/2 z-0 items-center justify-center">
-              <motion.div 
+              <motion.div
                 className="bg-[#0a0a0a] px-2 flex items-center justify-center text-white/30 font-serif text-sm select-none"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
@@ -105,9 +105,7 @@ export default function Comunidad() {
               </p>
               <SocialLinks
                 instagram="@cerrillolife"
-                tiktok="@cerrillolife"
                 instagramUrl="https://instagram.com/cerrillolife"
-                tiktokUrl="https://tiktok.com/@cerrillolife"
               />
             </div>
           </div>

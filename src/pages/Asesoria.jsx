@@ -10,11 +10,6 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.55, delay, ease: 'easeOut' },
 })
 
-const steps = [
-  { number: '1', label: 'Escríbeme por WhatsApp', desc: 'Dime qué quieres aprender o en qué te puedo ayudar.' },
-  { number: '2', label: 'Agendamos la sesión', desc: 'Coordinamos día y hora que te acomode.' },
-  { number: '3', label: 'Hacemos la sesión', desc: 'Nos conectamos por videollamada y trabajamos en tu caso.' },
-]
 
 export default function Asesoria() {
   const navigate = useNavigate()
@@ -32,7 +27,7 @@ export default function Asesoria() {
       <div className="fixed bottom-0 right-0 w-[50vw] h-[50vh] pointer-events-none z-0"
         style={{ background: 'radial-gradient(circle at 80% 80%, rgba(29,78,216,0.07) 0%, transparent 60%)' }} />
 
-      <div className="relative z-10 max-w-2xl mx-auto px-4 py-8">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 py-8">
 
         {/* Back */}
         <motion.button
@@ -55,7 +50,7 @@ export default function Asesoria() {
         </motion.div>
 
         {/* Plans */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 mb-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 items-stretch">
 
           {/* $20 */}
           <motion.div {...fadeUp(0.2)}>
@@ -165,32 +160,67 @@ export default function Asesoria() {
               </motion.button>
             </div>
           </motion.div>
-        </div>
 
-        {/* Cómo funciona */}
-        <motion.div {...fadeUp(0.4)} className="w-full mb-8">
-          <p className="text-xs text-white/40 uppercase tracking-[0.2em] text-center mb-5 font-bold">CÓMO FUNCIONA</p>
-          <div className="flex flex-col gap-3">
-            {steps.map((step, i) => (
+          {/* $150 */}
+          <motion.div {...fadeUp(0.4)}>
+            <div
+              className="rounded-2xl p-5 h-full flex flex-col relative overflow-hidden"
+              style={{
+                background: 'rgba(180,130,0,0.07)',
+                border: '1px solid rgba(245,158,11,0.35)',
+                boxShadow: '0 0 40px rgba(180,130,0,0.12)',
+                backdropFilter: 'blur(12px)',
+              }}
+            >
               <div
-                key={step.number}
-                className="flex items-start gap-4 rounded-2xl px-5 py-4"
-                style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}
+                className="absolute top-3 right-3 px-2 py-0.5 rounded-full text-[9px] font-black tracking-widest"
+                style={{ background: 'linear-gradient(135deg, #f59e0b, #d97706)', color: '#000' }}
               >
-                <div
-                  className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-black flex-shrink-0 mt-0.5"
-                  style={{ background: 'linear-gradient(135deg, #2563eb, #1d4ed8)', boxShadow: '0 0 12px rgba(37,99,235,0.4)' }}
-                >
-                  {step.number}
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-white">{step.label}</p>
-                  <p className="text-xs text-white/45 mt-0.5">{step.desc}</p>
-                </div>
+                PREMIUM
               </div>
-            ))}
-          </div>
-        </motion.div>
+
+              <div className="mb-3">
+                <div className="flex items-baseline gap-1.5 mt-1 mb-2">
+                  <span className="text-3xl font-black text-white">$150</span>
+                  <span className="text-xs text-white/40">USD</span>
+                </div>
+                <h2 className="text-lg font-bold text-white">Sesión de Implementación</h2>
+                <p className="text-[10px] text-amber-400/80 font-semibold uppercase tracking-widest mt-0.5">1.5 – 2 horas</p>
+                <p className="text-xs text-white/50 mt-2 leading-relaxed">
+                  Construimos juntos. Te llevas un sistema funcionando desde la sesión, no solo conocimiento.
+                </p>
+              </div>
+              <ul className="flex flex-col gap-2 mb-5 flex-1">
+                {[
+                  'Implementación en vivo (código o flujo funcional)',
+                  'Arquitectura de tu sistema con IA',
+                  'Integración de APIs reales (Claude, OpenAI, n8n…)',
+                  'Revisión técnica de tu código o automatizaciones',
+                  'Documento de entrega post-sesión',
+                  'Seguimiento por DM 7 días post-sesión',
+                ].map(b => (
+                  <li key={b} className="flex items-start gap-2 text-xs text-white/65">
+                    <span className="text-amber-400 font-bold mt-0.5">◆</span> {b}
+                  </li>
+                ))}
+              </ul>
+              <motion.button
+                whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(180,130,0,0.5)' }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => window.open('https://wa.me/525571729955?text=Hola%20Diego%2C%20quiero%20agendar%20una%20Sesi%C3%B3n%20de%20Implementaci%C3%B3n%20de%20%24150%20(1.5-2%20hrs).%20Mi%20proyecto%2Fobjetivo%20es%3A%20', '_blank')}
+                className="w-full text-center px-6 py-3 rounded-xl text-sm font-bold cursor-pointer mt-auto"
+                style={{
+                  background: 'linear-gradient(135deg, #f59e0b, #d97706)',
+                  boxShadow: '0 0 20px rgba(180,130,0,0.3)',
+                  border: 'none',
+                  color: '#000',
+                }}
+              >
+                Agendar por $150 →
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
 
         <div className="pb-8" />
       </div>

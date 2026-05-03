@@ -163,9 +163,9 @@ export default function App() {
               <div className="text-center md:text-left relative z-10 w-full md:w-auto flex-1">
                 <p className="text-lg md:text-xl font-bold text-white leading-tight mb-1.5 flex items-center justify-center md:justify-start gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse shadow-[0_0_10px_rgba(20,184,166,0.8)]" />
-                  🚀 Tu negocio en piloto automático con IA
+                  🚀 Escala sin contratar más
                 </p>
-                <p className="text-xs md:text-sm text-teal-100/70 font-medium text-balance">Escalamos y optimizamos tu negocio implementando herramientas de Inteligencia Artificial.</p>
+                <p className="text-xs md:text-sm text-teal-100/70 font-medium text-balance">Nexus AI construye los sistemas de IA que hacen el trabajo de un equipo, sin que tengas que contratar uno.</p>
               </div>
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(20,184,166,0.5)' }}
