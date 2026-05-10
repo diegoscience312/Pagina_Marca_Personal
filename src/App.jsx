@@ -63,6 +63,10 @@ export default function App() {
                 <p className="text-sm md:text-base text-white/70 leading-relaxed max-w-[320px] mx-auto text-balance">
                   Co-fundador de agencia IA. Lo que implemento, te lo enseño.
                 </p>
+                <p className="text-xs text-white/40 leading-relaxed max-w-[320px] mx-auto flex items-center justify-center gap-1.5">
+                  <span>🎓</span>
+                  <span>Ing. en Ciencia de Datos · Tec de Monterrey</span>
+                </p>
               </div>
               <SocialLinks
                 instagram="@ortegoat"

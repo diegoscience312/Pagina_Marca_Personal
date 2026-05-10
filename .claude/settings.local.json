@@ -4,7 +4,30 @@
       "Bash(npm run *)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(timeout 10 npx vite --port 5173)",
+      "Bash(pkill -f \"vite --port 5173\")",
+      "Bash(pkill -f \"npx vite\")",
+      "Bash(pkill -f vite)",
+      "Bash(pkill -f \"npm run dev\")",
+      "Bash(node --input-type=module)",
+      "Bash(npx vite *)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(lsof -ti:5173)",
+      "Bash(npm --version)",
+      "Bash(node node_modules/.bin/vite)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(kill %1)",
+      "Bash(node -e ' *)",
+      "Bash(NO_COLOR=1 FORCE_COLOR=0 node node_modules/.bin/vite --clearScreen false)",
+      "Read(//dev/**)",
+      "Bash(jobs)",
+      "Bash(node -e \"require\\('./node_modules/vite/dist/node/cli.js'\\)\")",
+      "Bash(kill %%)",
+      "Bash(rm -rf node_modules package-lock.json)",
+      "Bash(npm install *)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('exports', {}\\), indent=2\\)\\)\")",
+      "Bash(pkill -f \"vite\")"
     ]
   }
 }

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import ParticleBackground from '../components/ParticleBackground'
 import Avatar from '../components/Avatar'
+import Testimonials from '../components/Testimonials'
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -221,6 +222,11 @@ export default function Asesoria() {
             </div>
           </motion.div>
         </div>
+
+        {/* Testimonios */}
+        <motion.div {...fadeUp(0.5)} className="mb-8">
+          <Testimonials />
+        </motion.div>
 
         <div className="pb-8" />
       </div>
