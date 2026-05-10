@@ -61,7 +61,7 @@ export default function App() {
               <div className="text-center flex flex-col gap-2">
                 <p className="text-2xl md:text-3xl font-bold text-white leading-tight tracking-wide">Diego Ortega</p>
                 <p className="text-sm md:text-base text-white/70 leading-relaxed max-w-[320px] mx-auto text-balance">
-                  Co-fundador de agencia IA. Lo que implemento, te lo enseño.
+                  Founder de NexusAI. Lo que implemento, te lo enseño.
                 </p>
                 <p className="text-xs text-white/40 leading-relaxed max-w-[320px] mx-auto flex items-center justify-center gap-1.5">
                   <span>🎓</span>
