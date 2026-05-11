@@ -37,7 +37,7 @@ export default function Avatar({ name, delay = 0, small = false }) {
         />
         <div
           className="absolute top-0 left-0 w-full h-1/2 rounded-t-full z-20 pointer-events-none"
-          style={{ background: 'rgba(255,255,255,0.08)' }}
+          style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.08) 0%, transparent 100%)' }}
         />
       </div>
     </motion.div>
