@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 export default function Avatar({ name, delay = 0, small = false }) {
   const isMateo = name.includes('Mateo')
-  const imgSrc = isMateo ? '/images/Mateo.jpg' : '/images/profile.jpg'
+  const imgSrc = isMateo ? '/images/Mateo.jpg' : '/images/ortegoat2.png'
 
   return (
     <motion.div
@@ -29,7 +29,10 @@ export default function Avatar({ name, delay = 0, small = false }) {
           className="w-full h-full relative z-10"
           style={isMateo
             ? { objectFit: 'cover', objectPosition: 'center top' }
-            : { objectFit: 'cover', objectPosition: '40% 0%', transform: 'scale(2)', transformOrigin: '73% 0%' }
+            : {
+              objectFit: 'cover', objectPosition: 'center top', transform: 'scale(1.2) translateX(-7%)',
+              transformOrigin: 'center top'
+            }
           }
         />
         <div
