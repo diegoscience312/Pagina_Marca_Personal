@@ -61,6 +61,8 @@ export default function Testimonials() {
               src={photoTestimonial.sessionPhoto}
               alt={`Sesión con ${photoTestimonial.name}`}
               className="w-full object-cover"
+              loading="lazy"
+              decoding="async"
               style={{ maxHeight: '240px', objectPosition: 'center 42%' }}
             />
             <div

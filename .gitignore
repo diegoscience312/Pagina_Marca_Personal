@@ -27,3 +27,8 @@ dist-ssr
 .env
 .env.*
 !.env.example
+.vercel
+_image-originals/
+
+# Carpeta fuente de PDFs (los servidos están en public/guias)
+/guias/

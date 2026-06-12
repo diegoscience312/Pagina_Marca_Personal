@@ -51,7 +51,7 @@ export default function App() {
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="flex flex-col gap-6 w-full"
+          className="flex flex-col gap-4 w-full"
         >
 
           {/* ── HERO ── */}
@@ -71,16 +71,18 @@ export default function App() {
               <SocialLinks
                 instagram="@ortegoat"
                 tiktok="@ortegoat8"
+                linkedin="LinkedIn"
                 instagramUrl="https://instagram.com/ortegoat"
                 tiktokUrl="https://tiktok.com/@ortegoat8"
+                linkedinUrl="https://www.linkedin.com/in/diego-ortega-castellanos-436b2b210/"
               />
             </div>
           </motion.div>
 
           {/* ── ASESORÍA 1:1 CARD ── */}
-          <motion.div variants={itemVariants} className="w-full" whileHover={{ y: -5 }}>
+          <motion.div variants={itemVariants} className="w-full max-w-xl mx-auto" whileHover={{ y: -5 }}>
             <div
-              className="rounded-[1.25rem] p-5 md:p-6 flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden group transition-all duration-300"
+              className="rounded-[1.25rem] p-3.5 md:p-4 flex flex-col md:flex-row items-center justify-between gap-4 relative overflow-hidden group transition-all duration-300"
               style={{
                 background: 'linear-gradient(135deg, rgba(37,99,235,0.2), rgba(29,78,216,0.08))',
                 border: '1px solid rgba(59,130,246,0.35)',
@@ -92,17 +94,17 @@ export default function App() {
               <div className="absolute top-0 left-[-100%] w-[200%] h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-[-20deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
               <div className="text-center md:text-left relative z-10 w-full md:w-auto flex-1">
-                <p className="text-lg md:text-xl font-bold text-white leading-tight mb-1.5 flex items-center justify-center md:justify-start gap-2">
+                <p className="text-base md:text-lg font-bold text-white leading-tight mb-1 flex items-center justify-center md:justify-start gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
                   🎯 Asesoría & Consultoría 1:1
                 </p>
-                <p className="text-xs md:text-sm text-blue-100/70 font-medium text-balance">Claude Code, contenido con IA, páginas web, automatizaciones y más, te enseño lo que uso yo.</p>
+                <p className="text-xs leading-snug text-blue-100/70 font-medium text-balance">Claude Code, contenido con IA, páginas web, automatizaciones y más, te enseño lo que uso yo.</p>
               </div>
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(37,99,235,0.6)' }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => navigate('/asesoria')}
-                className="w-full md:w-[240px] flex-shrink-0 px-6 py-3 rounded-xl text-sm font-bold text-white cursor-pointer relative z-10 transition-shadow duration-300"
+                className="w-full md:w-[190px] flex-shrink-0 px-4 py-2 rounded-xl text-[13px] font-bold text-white cursor-pointer relative z-10 transition-shadow duration-300"
                 style={{
                   background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
                   boxShadow: '0 0 20px rgba(37,99,235,0.4)',
@@ -115,9 +117,9 @@ export default function App() {
           </motion.div>
 
           {/* ── COMMUNITY CTA ── */}
-          <motion.div variants={itemVariants} className="w-full" whileHover={{ y: -5 }}>
+          <motion.div variants={itemVariants} className="w-full max-w-xl mx-auto" whileHover={{ y: -5 }}>
             <div
-              className="rounded-[1.25rem] p-5 md:p-6 flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden group shadow-[0_15px_40px_rgba(139,92,246,0.25)] transition-all duration-300"
+              className="rounded-[1.25rem] p-3.5 md:p-4 flex flex-col md:flex-row items-center justify-between gap-4 relative overflow-hidden group shadow-[0_15px_40px_rgba(139,92,246,0.25)] transition-all duration-300"
               style={{
                 background: 'linear-gradient(135deg, rgba(59,130,246,0.2), rgba(139,92,246,0.25))',
                 border: '1px solid rgba(139,92,246,0.4)',
@@ -128,20 +130,20 @@ export default function App() {
               <div className="absolute top-0 left-[-100%] w-[200%] h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-[-20deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
               <div className="text-center md:text-left relative z-10 w-full md:w-auto flex-1">
-                <p className="text-lg md:text-xl font-bold text-white leading-tight mb-1.5 flex items-center justify-center md:justify-start gap-2">
+                <p className="text-base md:text-lg font-bold text-white leading-tight mb-1 flex items-center justify-center md:justify-start gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-purple-400 animate-pulse shadow-[0_0_10px_rgba(167,139,250,0.8)]" />
                   🎓 Aprende IA, únete gratis
                 </p>
-                <p className="text-xs md:text-sm text-purple-100/70 font-medium text-balance">Comunidad de creadores y emprendedores que usan IA</p>
+                <p className="text-xs leading-snug text-purple-100/70 font-medium text-balance">Comunidad de creadores y emprendedores que usan IA</p>
               </div>
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(139,92,246,0.6)' }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => navigate('/comunidad')}
-                className="w-full md:w-[240px] flex-shrink-0 px-6 py-3 rounded-xl text-sm font-bold text-white cursor-pointer relative z-10 transition-shadow duration-300"
+                className="w-full md:w-[190px] flex-shrink-0 px-4 py-2 rounded-xl text-[13px] font-bold text-white cursor-pointer relative z-10 transition-shadow duration-300"
                 style={{
-                  background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-                  boxShadow: '0 0 20px rgba(139,92,246,0.5)',
+                  background: 'linear-gradient(135deg, #6e72f3, #5a55e8)',
+                  boxShadow: '0 0 20px rgba(110,114,243,0.5)',
                   border: '1px solid rgba(255,255,255,0.1)',
                 }}
               >
@@ -151,9 +153,9 @@ export default function App() {
           </motion.div>
 
           {/* ── AGENCY CARD ── */}
-          <motion.div variants={itemVariants} className="w-full" whileHover={{ y: -5 }}>
+          <motion.div variants={itemVariants} className="w-full max-w-xl mx-auto" whileHover={{ y: -5 }}>
             <div
-              className="rounded-[1.25rem] p-5 md:p-6 flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden group shadow-2xl transition-all duration-300"
+              className="rounded-[1.25rem] p-3.5 md:p-4 flex flex-col md:flex-row items-center justify-between gap-4 relative overflow-hidden group shadow-2xl transition-all duration-300"
               style={{
                 background: 'linear-gradient(135deg, rgba(20,184,166,0.15), rgba(13,148,136,0.05))',
                 border: '1px solid rgba(20,184,166,0.3)',
@@ -165,17 +167,17 @@ export default function App() {
               <div className="absolute top-0 left-[-100%] w-[200%] h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-[-20deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
               <div className="text-center md:text-left relative z-10 w-full md:w-auto flex-1">
-                <p className="text-lg md:text-xl font-bold text-white leading-tight mb-1.5 flex items-center justify-center md:justify-start gap-2">
+                <p className="text-base md:text-lg font-bold text-white leading-tight mb-1 flex items-center justify-center md:justify-start gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse shadow-[0_0_10px_rgba(20,184,166,0.8)]" />
                   🚀 Escala sin contratar más
                 </p>
-                <p className="text-xs md:text-sm text-teal-100/70 font-medium text-balance">Nexus AI construye los sistemas de IA que hacen el trabajo de un equipo, sin que tengas que contratar uno.</p>
+                <p className="text-xs leading-snug text-teal-100/70 font-medium text-balance">Nexus AI construye los sistemas de IA que hacen el trabajo de un equipo, sin que tengas que contratar uno.</p>
               </div>
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(20,184,166,0.5)' }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => window.open('https://www.nexusaimx.lat', '_blank')}
-                className="w-full md:w-[240px] flex-shrink-0 px-6 py-3 rounded-xl text-sm font-bold text-white cursor-pointer relative z-10 transition-shadow duration-300"
+                className="w-full md:w-[190px] flex-shrink-0 px-4 py-2 rounded-xl text-[13px] font-bold text-white cursor-pointer relative z-10 transition-shadow duration-300"
                 style={{
                   background: 'linear-gradient(135deg, #14b8a6, #06b6d4)',
                   boxShadow: '0 0 20px rgba(20,184,166,0.5)',
