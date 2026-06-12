@@ -88,8 +88,8 @@ export const guias = [
   },
   {
     id: 'github-repos',
-    titulo: 'Repos de GitHub útiles',
-    descripcion: 'Repositorios recomendados para potenciar tu flujo con Claude Code.',
+    titulo: '6 repos de GitHub',
+    descripcion: '6 repos de GitHub más valiosos que cualquier curso de paga.',
     categoria: 'Claude Code',
     fecha: '2026-06-04',
     archivo: '/guias/github-repos-the-grid.pdf',
