@@ -267,8 +267,8 @@ export const guias = [
   // ── Recursos ─────────────────────────────────────────────────────────────
   {
     id: 'the-grid-13-pasos',
-    titulo: 'The Grid: 13 pasos',
-    descripcion: 'El roadmap de 13 pasos de la comunidad The Grid.',
+    titulo: '13 pasos para configurar Claude',
+    descripcion: 'El orden que hubiera querido tener el día que empecé a usar Claude de verdad.',
     categoria: 'Recursos',
     fecha: '2026-04-19',
     archivo: '/guias/the-grid-13-pasos-2.pdf',
