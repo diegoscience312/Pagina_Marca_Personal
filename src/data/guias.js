@@ -291,8 +291,8 @@ export const guias = [
   },
   {
     id: 'prompt-razon',
-    titulo: 'Prompt: Razón',
-    descripcion: 'El prompt que uso para que Claude razone mejor antes de responder.',
+    titulo: 'Prompt: cuando Claude te da la razón',
+    descripcion: 'Claude siempre te dice que tienes razón, hasta cuando te equivocas. El prompt de una línea que lo cambia.',
     categoria: 'Recursos',
     fecha: '2026-06-11',
     archivo: '/guias/prompt-razon.pdf',
