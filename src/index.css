@@ -9,6 +9,10 @@
     color: white;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
+  /* Evita el rebote/brinco al llegar al tope o al fondo en móvil */
+  html, body {
+    overscroll-behavior-y: none;
+  }
 }
 
 @layer utilities {

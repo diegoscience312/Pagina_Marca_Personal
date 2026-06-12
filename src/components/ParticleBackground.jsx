@@ -8,7 +8,13 @@ export default function ParticleBackground() {
     const ctx = canvas.getContext('2d')
     let animId
 
+    // En móvil, ocultar/mostrar la barra del navegador dispara 'resize' por
+    // el cambio de ALTO. Solo redimensionamos si cambia el ANCHO (rotación),
+    // así evitamos el redibujado/salto al hacer scroll hasta el fondo.
+    let lastWidth = 0
     const resize = () => {
+      if (window.innerWidth === lastWidth) return
+      lastWidth = window.innerWidth
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
     }
