@@ -26,6 +26,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             </Suspense>
           }
         />
+        {/* Link personalizado y compartible por guía: /guias/<id> */}
+        <Route
+          path="/guias/:guiaId"
+          element={
+            <Suspense fallback={<div className="min-h-screen bg-[#0a0a0a]" />}>
+              <Guias />
+            </Suspense>
+          }
+        />
       </Routes>
     </BrowserRouter>
     <Analytics />

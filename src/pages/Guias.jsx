@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState, Suspense, lazy } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import ParticleBackground from '../components/ParticleBackground'
 import { guias, categorias } from '../data/guias'
@@ -25,14 +26,31 @@ function formatFecha(fecha) {
 }
 
 export default function Guias() {
+  const { guiaId } = useParams()
+  const navigate = useNavigate()
   const [query, setQuery] = useState('')
   const [categoria, setCategoria] = useState('Todas')
   const [orden, setOrden] = useState('recientes') // 'recientes' | 'az'
-  const [guiaAbierta, setGuiaAbierta] = useState(null)
+
+  // La guía abierta se deriva de la URL (/guias/<id>), así el link es compartible.
+  const guiaAbierta = useMemo(
+    () => (guiaId ? guias.find((g) => g.id === guiaId) ?? null : null),
+    [guiaId],
+  )
+
+  // Si la URL trae un id que no existe, regresa al listado.
+  useEffect(() => {
+    if (guiaId && !guiaAbierta) navigate('/guias', { replace: true })
+  }, [guiaId, guiaAbierta, navigate])
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  const abrirGuia = (g) => {
+    if (g.archivo) navigate(`/guias/${g.id}`)
+    else if (g.url) window.open(g.url, '_blank', 'noopener,noreferrer')
+  }
 
   const resultados = useMemo(() => {
     const q = query.trim().toLowerCase()
@@ -163,10 +181,7 @@ export default function Guias() {
               <motion.button
                 key={g.id}
                 type="button"
-                onClick={() => {
-                  if (g.archivo) setGuiaAbierta(g)
-                  else if (g.url) window.open(g.url, '_blank', 'noopener,noreferrer')
-                }}
+                onClick={() => abrirGuia(g)}
                 {...fadeUp(0.25 + Math.min(i, 8) * 0.04)}
                 whileHover={{ y: -4 }}
                 className="group rounded-2xl p-5 flex flex-col h-full relative overflow-hidden text-left cursor-pointer"
@@ -216,7 +231,7 @@ export default function Guias() {
       {/* Visor de PDF dentro de la página (carga diferida) */}
       {guiaAbierta && (
         <Suspense fallback={null}>
-          <PdfViewer guia={guiaAbierta} onClose={() => setGuiaAbierta(null)} />
+          <PdfViewer guia={guiaAbierta} onClose={() => navigate('/guias')} />
         </Suspense>
       )}
     </div>
