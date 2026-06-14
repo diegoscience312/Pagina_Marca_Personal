@@ -91,6 +91,15 @@ export default function Guias() {
       />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 py-8">
+        {/* Back */}
+        <motion.button
+          {...fadeUp(0)}
+          onClick={() => navigate('/')}
+          className="flex items-center gap-1.5 text-xs text-white/40 hover:text-white/70 transition-colors mb-6 cursor-pointer bg-transparent border-none"
+        >
+          ← Volver
+        </motion.button>
+
         {/* Header */}
         <motion.div {...fadeUp(0.1)} className="text-center mb-7">
           <h1 className="text-2xl md:text-3xl font-bold leading-tight">
