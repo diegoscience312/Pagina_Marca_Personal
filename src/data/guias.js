@@ -229,6 +229,14 @@ export const guias = [
     fecha: '2026-06-11',
     archivo: '/guias/guia-10-prompts-de-claude-para-optimizar-tu-linkedin-ortegoat.pdf',
   },
+  {
+    id: '5-prompts-cv',
+    titulo: '5 Prompts para optimizar tu CV',
+    descripcion: '5 prompts de Claude para mejorar tu CV y destacar en cualquier vacante.',
+    categoria: 'Negocio',
+    fecha: '2026-06-13',
+    archivo: '/guias/guia-5-prompts-de-claude-para-optimizar-tu-cv-ortegoat.pdf',
+  },
 
   // ── Diseño & Web ─────────────────────────────────────────────────────────
   {
