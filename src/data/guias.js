@@ -274,6 +274,15 @@ export const guias = [
 
   // ── Recursos ─────────────────────────────────────────────────────────────
   {
+    id: '4-canales-aprender-ia',
+    titulo: '4 canales para aprender IA',
+    descripcion: 'Los 4 canales que sigo para mantenerme al día y aprender IA gratis.',
+    categoria: 'Recursos',
+    fecha: '2026-06-17',
+    archivo: '/guias/4-canales-aprender-ia.pdf',
+    destacada: true,
+  },
+  {
     id: 'the-grid-13-pasos',
     titulo: '13 pasos para configurar Claude',
     descripcion: 'El orden que hubiera querido tener el día que empecé a usar Claude de verdad.',
