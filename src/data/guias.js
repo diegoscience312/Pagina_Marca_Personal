@@ -119,6 +119,15 @@ export const guias = [
     fecha: '2026-06-11',
     archivo: '/guias/como-configurar-claude-cowork.pdf',
   },
+  {
+    id: 'claude-council',
+    titulo: 'Claude Council',
+    descripcion: 'Cómo usar Claude Council para que varios Claude debatan y mejoren tus respuestas.',
+    categoria: 'Claude Code',
+    fecha: '2026-06-18',
+    archivo: '/guias/claude-council.pdf',
+    destacada: true,
+  },
 
   // ── Contenido ────────────────────────────────────────────────────────────
   {
