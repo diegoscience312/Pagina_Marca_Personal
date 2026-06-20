@@ -246,6 +246,15 @@ export const guias = [
     fecha: '2026-06-13',
     archivo: '/guias/guia-5-prompts-de-claude-para-optimizar-tu-cv-ortegoat.pdf',
   },
+  {
+    id: 'cv-imposible-de-rechazar',
+    titulo: 'Haz tu CV imposible de rechazar',
+    descripcion: 'Cómo usar Claude para crear un CV que destaque y sea imposible de rechazar.',
+    categoria: 'Negocio',
+    fecha: '2026-06-19',
+    archivo: '/guias/hacer-tu-cv-imposible-de-rechazar.pdf',
+    destacada: true,
+  },
 
   // ── Diseño & Web ─────────────────────────────────────────────────────────
   {
