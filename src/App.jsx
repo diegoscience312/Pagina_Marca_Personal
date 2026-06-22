@@ -189,6 +189,21 @@ export default function App() {
             </div>
           </motion.div>
 
+          {/* ── GUÍAS LINK (sutil) ── */}
+          <motion.div variants={itemVariants} className="w-full flex justify-center pt-1">
+            <button
+              onClick={() => navigate('/guias')}
+              className="group inline-flex items-center gap-1.5 text-xs md:text-sm font-medium text-white/45 hover:text-white/80 transition-colors duration-300 cursor-pointer"
+            >
+              <span className="text-sm opacity-70 group-hover:opacity-100 transition-opacity">📚</span>
+              <span className="relative">
+                Explora mis guías gratis
+                <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-white/60 group-hover:w-full transition-all duration-300 ease-out" />
+              </span>
+              <span className="transition-transform duration-300 group-hover:translate-x-0.5">→</span>
+            </button>
+          </motion.div>
+
         </motion.div>
 
       </div>
