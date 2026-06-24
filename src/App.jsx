@@ -96,7 +96,7 @@ export default function App() {
               <div className="text-center md:text-left relative z-10 w-full md:w-auto flex-1">
                 <p className="text-base md:text-lg font-bold text-white leading-tight mb-1 flex items-center justify-center md:justify-start gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse shadow-[0_0_10px_rgba(20,184,166,0.8)]" />
-                  🚀 La IA de tu empresa, hecha a tu medida
+                  🚀 IA hecha a tu medida
                 </p>
                 <p className="text-xs leading-snug text-teal-100/70 font-medium text-balance">NoxAI: CRMs inteligentes con IA/agentes, automatizaciones, agentes de IA e integraciones.</p>
               </div>
