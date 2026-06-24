@@ -61,7 +61,7 @@ export default function App() {
               <div className="text-center flex flex-col gap-2">
                 <p className="text-2xl md:text-3xl font-bold text-white leading-tight tracking-wide">Diego Ortega</p>
                 <p className="text-sm md:text-base text-white/70 leading-relaxed max-w-[320px] mx-auto text-balance">
-                  Founder de NexusAI. Lo que implemento, te lo enseño.
+                  Founder de NoxAI. Lo que implemento, te lo enseño.
                 </p>
                 <p className="text-xs text-white/40 leading-relaxed max-w-[320px] mx-auto flex items-center justify-center gap-1.5">
                   <span>🎓</span>
@@ -79,14 +79,14 @@ export default function App() {
             </div>
           </motion.div>
 
-          {/* ── ASESORÍA 1:1 CARD ── */}
+          {/* ── AGENCY CARD ── */}
           <motion.div variants={itemVariants} className="w-full max-w-xl mx-auto" whileHover={{ y: -5 }}>
             <div
-              className="rounded-[1.25rem] p-3.5 md:p-4 flex flex-col md:flex-row items-center justify-between gap-4 relative overflow-hidden group transition-all duration-300"
+              className="rounded-[1.25rem] p-3.5 md:p-4 flex flex-col md:flex-row items-center justify-between gap-4 relative overflow-hidden group shadow-2xl transition-all duration-300"
               style={{
-                background: 'linear-gradient(135deg, rgba(37,99,235,0.2), rgba(29,78,216,0.08))',
-                border: '1px solid rgba(59,130,246,0.35)',
-                boxShadow: '0 10px 40px -10px rgba(37,99,235,0.2)',
+                background: 'linear-gradient(135deg, rgba(20,184,166,0.15), rgba(13,148,136,0.05))',
+                border: '1px solid rgba(20,184,166,0.3)',
+                boxShadow: '0 10px 40px -10px rgba(20,184,166,0.15)',
                 backdropFilter: 'blur(12px)',
               }}
             >
@@ -95,23 +95,23 @@ export default function App() {
 
               <div className="text-center md:text-left relative z-10 w-full md:w-auto flex-1">
                 <p className="text-base md:text-lg font-bold text-white leading-tight mb-1 flex items-center justify-center md:justify-start gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
-                  🎯 Asesoría & Consultoría 1:1
+                  <span className="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse shadow-[0_0_10px_rgba(20,184,166,0.8)]" />
+                  🚀 La IA de tu empresa, hecha a tu medida
                 </p>
-                <p className="text-xs leading-snug text-blue-100/70 font-medium text-balance">Claude Code, contenido con IA, páginas web, automatizaciones y más, te enseño lo que uso yo.</p>
+                <p className="text-xs leading-snug text-teal-100/70 font-medium text-balance">NoxAI: CRMs inteligentes con IA/agentes, automatizaciones, agentes de IA e integraciones.</p>
               </div>
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(37,99,235,0.6)' }}
+                whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(20,184,166,0.5)' }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => navigate('/asesoria')}
+                onClick={() => window.open('https://www.noxai.lat', '_blank')}
                 className="w-full md:w-[190px] flex-shrink-0 px-4 py-2 rounded-xl text-[13px] font-bold text-white cursor-pointer relative z-10 transition-shadow duration-300"
                 style={{
-                  background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
-                  boxShadow: '0 0 20px rgba(37,99,235,0.4)',
+                  background: 'linear-gradient(135deg, #14b8a6, #06b6d4)',
+                  boxShadow: '0 0 20px rgba(20,184,166,0.5)',
                   border: '1px solid rgba(255,255,255,0.1)',
                 }}
               >
-                Agendar sesión →
+                Implementa IA ahora →
               </motion.button>
             </div>
           </motion.div>
@@ -152,14 +152,14 @@ export default function App() {
             </div>
           </motion.div>
 
-          {/* ── AGENCY CARD ── */}
+          {/* ── ASESORÍA 1:1 CARD ── */}
           <motion.div variants={itemVariants} className="w-full max-w-xl mx-auto" whileHover={{ y: -5 }}>
             <div
-              className="rounded-[1.25rem] p-3.5 md:p-4 flex flex-col md:flex-row items-center justify-between gap-4 relative overflow-hidden group shadow-2xl transition-all duration-300"
+              className="rounded-[1.25rem] p-3.5 md:p-4 flex flex-col md:flex-row items-center justify-between gap-4 relative overflow-hidden group transition-all duration-300"
               style={{
-                background: 'linear-gradient(135deg, rgba(20,184,166,0.15), rgba(13,148,136,0.05))',
-                border: '1px solid rgba(20,184,166,0.3)',
-                boxShadow: '0 10px 40px -10px rgba(20,184,166,0.15)',
+                background: 'linear-gradient(135deg, rgba(37,99,235,0.2), rgba(29,78,216,0.08))',
+                border: '1px solid rgba(59,130,246,0.35)',
+                boxShadow: '0 10px 40px -10px rgba(37,99,235,0.2)',
                 backdropFilter: 'blur(12px)',
               }}
             >
@@ -168,23 +168,23 @@ export default function App() {
 
               <div className="text-center md:text-left relative z-10 w-full md:w-auto flex-1">
                 <p className="text-base md:text-lg font-bold text-white leading-tight mb-1 flex items-center justify-center md:justify-start gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse shadow-[0_0_10px_rgba(20,184,166,0.8)]" />
-                  🚀 Escala sin contratar más
+                  <span className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
+                  🎯 Asesoría & Consultoría 1:1
                 </p>
-                <p className="text-xs leading-snug text-teal-100/70 font-medium text-balance">Nexus AI construye los sistemas de IA que hacen el trabajo de un equipo, sin que tengas que contratar uno.</p>
+                <p className="text-xs leading-snug text-blue-100/70 font-medium text-balance">Claude Code, contenido con IA, páginas web, automatizaciones y más, te enseño lo que uso yo.</p>
               </div>
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(20,184,166,0.5)' }}
+                whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(37,99,235,0.6)' }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => window.open('https://www.nexusaimx.lat', '_blank')}
+                onClick={() => navigate('/asesoria')}
                 className="w-full md:w-[190px] flex-shrink-0 px-4 py-2 rounded-xl text-[13px] font-bold text-white cursor-pointer relative z-10 transition-shadow duration-300"
                 style={{
-                  background: 'linear-gradient(135deg, #14b8a6, #06b6d4)',
-                  boxShadow: '0 0 20px rgba(20,184,166,0.5)',
+                  background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
+                  boxShadow: '0 0 20px rgba(37,99,235,0.4)',
                   border: '1px solid rgba(255,255,255,0.1)',
                 }}
               >
-                Implementa IA ahora →
+                Agendar sesión →
               </motion.button>
             </div>
           </motion.div>
