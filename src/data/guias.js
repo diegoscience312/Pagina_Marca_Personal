@@ -22,6 +22,15 @@ export const categorias = ['Claude Code', 'Contenido', 'Negocio', 'Diseño & Web
 export const guias = [
   // ── Claude Code ──────────────────────────────────────────────────────────
   {
+    id: 'mejores-practicas-claude',
+    titulo: 'Mejores prácticas de Claude',
+    descripcion: 'Consejos y buenas prácticas para sacarle el máximo provecho a Claude.',
+    categoria: 'Claude Code',
+    fecha: '2026-06-25',
+    archivo: '/guias/mejores-practicas-claude.pdf',
+    destacada: true,
+  },
+  {
     id: 'claude-code-desde-cero',
     titulo: 'Claude Code desde cero',
     descripcion: 'Guía completa para empezar con Claude Code partiendo de cero.',
