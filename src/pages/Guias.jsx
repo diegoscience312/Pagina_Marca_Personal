@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState, Suspense, lazy } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import ParticleBackground from '../components/ParticleBackground'
+import ReelsSection from '../components/ReelsSection'
 import { guias, categorias } from '../data/guias'
 
 // El visor (react-pdf) se descarga solo cuando se abre una guía
@@ -110,6 +111,9 @@ export default function Guias() {
             Busca, filtra y abre todas mis guías en un solo lugar.
           </p>
         </motion.div>
+
+        {/* Últimos Reels */}
+        <ReelsSection />
 
         {/* Buscador */}
         <motion.div {...fadeUp(0.15)} className="mb-4">

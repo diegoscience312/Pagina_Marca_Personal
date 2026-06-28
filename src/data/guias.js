@@ -301,6 +301,14 @@ export const guias = [
 
   // ── Recursos ─────────────────────────────────────────────────────────────
   {
+    id: 'obsidian-claude',
+    titulo: 'Claude + Obsidian',
+    descripcion: 'Conecta Claude con Obsidian para construir tu segundo cerebro y organizar tus notas con IA.',
+    categoria: 'Recursos',
+    fecha: '2026-06-28',
+    archivo: '/guias/obsidian-claude-the-grid.pdf',
+  },
+  {
     id: '4-canales-aprender-ia',
     titulo: '4 canales para aprender IA',
     descripcion: 'Los 4 canales que sigo para mantenerme al día y aprender IA gratis.',
