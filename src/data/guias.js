@@ -11,11 +11,13 @@
 //                 de la página (no redirige a Drive).
 //   url         → (opcional) link externo en vez de "archivo" (abre en pestaña nueva)
 //   destacada   → true para badge ⭐ (opcional)
-//   reel        → (opcional) link del reel de Instagram de donde salió la guía.
+//   reel        → (opcional) reel de Instagram de donde salió la guía.
+//                 Es un objeto { titulo, thumb }:
+//                   titulo → nombre del reel que se muestra en la tarjeta
+//                   thumb  → (opcional) imagen de portada dentro de /public,
+//                            ej. '/reels/mi-reel.jpg'. Si falta, se usa un degradado.
 //                 Las guías con "reel" aparecen en la sección "🎬 Últimos Reels"
-//                 arriba de la página y muestran un botón "Ver reel".
-//   reelThumb   → (opcional) imagen de portada del reel dentro de /public,
-//                 ej. '/reels/mi-reel.jpg'. Si falta, se usa un degradado.
+//                 arriba de la página. Al dar clic se abre la guía.
 //
 // Para alojar un PDF nuevo: ponlo en  public/guias/  y referencia
 // '/guias/nombre.pdf' aquí (sin espacios ni acentos en el nombre).
@@ -34,7 +36,6 @@ export const guias = [
     fecha: '2026-06-25',
     archivo: '/guias/mejores-practicas-claude.pdf',
     destacada: true,
-    reel: 'https://instagram.com/ortegoat', // ← reemplaza por el link real del reel
   },
   {
     id: 'claude-code-desde-cero',
@@ -313,7 +314,10 @@ export const guias = [
     categoria: 'Recursos',
     fecha: '2026-06-28',
     archivo: '/guias/obsidian-claude-the-grid.pdf',
-    reel: 'https://instagram.com/ortegoat', // ← reemplaza por el link real del reel
+    reel: {
+      titulo: 'Obsidian para estudiantes',
+      thumb: '', // ← agrega aquí la portada, ej. '/reels/obsidian-para-estudiantes.jpg'
+    },
   },
   {
     id: '4-canales-aprender-ia',
@@ -323,7 +327,6 @@ export const guias = [
     fecha: '2026-06-17',
     archivo: '/guias/4-canales-aprender-ia.pdf',
     destacada: true,
-    reel: 'https://instagram.com/ortegoat', // ← reemplaza por el link real del reel
   },
   {
     id: 'the-grid-13-pasos',
