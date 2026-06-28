@@ -75,6 +75,16 @@ export default function Guias() {
     return lista
   }, [query, categoria, orden])
 
+  // Guías que tienen un reel asociado → alimentan la sección "Últimos Reels"
+  const reels = useMemo(
+    () =>
+      guias
+        .filter((g) => g.reel)
+        .sort((a, b) => new Date(b.fecha) - new Date(a.fecha))
+        .slice(0, 8),
+    [],
+  )
+
   const filtros = ['Todas', ...categorias]
 
   return (
@@ -113,7 +123,7 @@ export default function Guias() {
         </motion.div>
 
         {/* Últimos Reels */}
-        <ReelsSection />
+        <ReelsSection reels={reels} onOpen={abrirGuia} />
 
         {/* Buscador */}
         <motion.div {...fadeUp(0.15)} className="mb-4">
@@ -211,7 +221,23 @@ export default function Guias() {
                   <span className="text-[10px] font-bold text-blue-300/80 uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-400/20">
                     {g.categoria}
                   </span>
-                  {g.destacada && <span className="text-xs" title="Destacada">⭐</span>}
+                  <div className="flex items-center gap-1.5">
+                    {g.reel && (
+                      <span
+                        role="button"
+                        tabIndex={0}
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          window.open(g.reel, '_blank', 'noopener,noreferrer')
+                        }}
+                        title="Ver reel en Instagram"
+                        className="text-[10px] font-bold text-pink-300/80 hover:text-pink-200 px-2 py-0.5 rounded-full bg-pink-500/10 border border-pink-400/20 transition-colors cursor-pointer"
+                      >
+                        🎬 Reel
+                      </span>
+                    )}
+                    {g.destacada && <span className="text-xs" title="Destacada">⭐</span>}
+                  </div>
                 </div>
 
                 <h3 className="text-base font-bold text-white leading-snug mb-1.5 relative z-10">

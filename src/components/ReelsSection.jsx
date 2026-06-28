@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { reels } from '../data/reels'
 
 // Ícono de Instagram (mismo trazo que el resto del sitio)
 const InstagramIcon = () => (
@@ -9,12 +8,14 @@ const InstagramIcon = () => (
 )
 
 const PlayIcon = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-white/90">
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white/90">
     <path d="M8 5v14l11-7z" />
   </svg>
 )
 
-export default function ReelsSection() {
+// `reels` = guías que tienen un reel asociado (campo `reel`).
+// onOpen(g) abre la GUÍA (el visor de PDF dentro de la página).
+export default function ReelsSection({ reels, onOpen }) {
   if (!reels || reels.length === 0) return null
 
   return (
@@ -25,7 +26,7 @@ export default function ReelsSection() {
       className="mb-8"
     >
       {/* Encabezado de la sección */}
-      <div className="flex items-center justify-between gap-2 mb-3">
+      <div className="flex items-center justify-between gap-2 mb-1">
         <h2 className="text-sm font-bold text-white/90 flex items-center gap-1.5">
           <span>🎬</span> Últimos Reels
         </h2>
@@ -38,27 +39,26 @@ export default function ReelsSection() {
           Ver todos →
         </a>
       </div>
+      <p className="text-white/45 text-xs mb-3">¿Viste un reel? Aquí está su guía. 👇</p>
 
-      {/* Carrusel horizontal de reels */}
+      {/* Carrusel horizontal: cada tarjeta es un reel → abre su guía */}
       <div
         className="flex gap-3 overflow-x-auto pb-2 -mx-1 px-1 hide-scrollbar snap-x snap-mandatory"
         style={{ scrollbarWidth: 'none' }}
       >
-        {reels.map((reel, i) => (
-          <motion.a
-            key={i}
-            href={reel.url}
-            target="_blank"
-            rel="noopener noreferrer"
+        {reels.map((g) => (
+          <motion.div
+            key={g.id}
+            onClick={() => onOpen(g)}
             whileHover={{ y: -4 }}
-            className="group relative flex-shrink-0 w-[140px] aspect-[9/16] rounded-2xl overflow-hidden snap-start cursor-pointer"
+            className="group relative flex-shrink-0 w-[150px] aspect-[9/16] rounded-2xl overflow-hidden snap-start cursor-pointer"
             style={{ border: '1px solid rgba(255,255,255,0.08)' }}
           >
-            {/* Portada: imagen si existe, si no degradado */}
-            {reel.thumbnail ? (
+            {/* Portada: imagen del reel si existe, si no degradado */}
+            {g.reelThumb ? (
               <img
-                src={reel.thumbnail}
-                alt={reel.titulo}
+                src={g.reelThumb}
+                alt={g.titulo}
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
               />
@@ -73,27 +73,37 @@ export default function ReelsSection() {
             )}
 
             {/* Capa oscura para legibilidad */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-black/10" />
 
-            {/* Botón de play centrado */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-11 h-11 rounded-full flex items-center justify-center bg-black/40 border border-white/30 backdrop-blur-sm group-hover:scale-110 group-hover:bg-black/55 transition-all">
+            {/* Botón "ver reel" (abre Instagram, sin abrir la guía) */}
+            <a
+              href={g.reel}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              title="Ver reel en Instagram"
+              className="absolute top-2 right-2 w-7 h-7 rounded-full flex items-center justify-center bg-black/45 border border-white/25 text-white/85 hover:text-pink-300 hover:bg-black/65 backdrop-blur-sm transition-all"
+            >
+              <InstagramIcon />
+            </a>
+
+            {/* Play central */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="w-11 h-11 rounded-full flex items-center justify-center bg-black/35 border border-white/30 backdrop-blur-sm group-hover:scale-110 transition-transform">
                 <PlayIcon />
               </div>
             </div>
 
-            {/* Badge de Instagram */}
-            <div className="absolute top-2 right-2 text-white/80">
-              <InstagramIcon />
-            </div>
-
-            {/* Título */}
+            {/* Pie: título de la guía + CTA */}
             <div className="absolute bottom-0 left-0 right-0 p-2.5">
-              <p className="text-[11px] font-semibold text-white leading-snug line-clamp-2">
-                {reel.titulo}
+              <p className="text-[11px] font-semibold text-white leading-snug line-clamp-2 mb-1">
+                {g.titulo}
               </p>
+              <span className="text-[10px] font-bold text-blue-300 group-hover:text-blue-200 transition-colors">
+                Ver guía →
+              </span>
             </div>
-          </motion.a>
+          </motion.div>
         ))}
       </div>
     </motion.section>
