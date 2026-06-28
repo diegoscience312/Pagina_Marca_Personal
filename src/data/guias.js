@@ -316,7 +316,7 @@ export const guias = [
     archivo: '/guias/obsidian-claude-the-grid.pdf',
     reel: {
       titulo: 'Obsidian para estudiantes',
-      thumb: '/images/reels/obsidian.png',
+      thumb: '/images/reels/obsidian.jpg',
     },
   },
   {
