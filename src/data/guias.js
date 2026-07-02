@@ -308,6 +308,18 @@ export const guias = [
 
   // ── Recursos ─────────────────────────────────────────────────────────────
   {
+    id: 'record-replay-codex',
+    titulo: 'Record & Replay en Codex',
+    descripcion: 'Cómo grabar y repetir tus acciones con Record & Replay en Codex.',
+    categoria: 'Recursos',
+    fecha: '2026-07-01',
+    archivo: '/guias/record-replay-codex.pdf',
+    reel: {
+      titulo: 'Record & Replay',
+      thumb: '/images/reels/replay.jpg',
+    },
+  },
+  {
     id: 'obsidian-claude',
     titulo: 'Claude + Obsidian',
     descripcion: 'Conecta Claude con Obsidian para construir tu segundo cerebro y organizar tus notas con IA.',
