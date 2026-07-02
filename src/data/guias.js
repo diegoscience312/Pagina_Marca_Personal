@@ -308,6 +308,18 @@ export const guias = [
 
   // ── Recursos ─────────────────────────────────────────────────────────────
   {
+    id: 'nvidia-build-free-api',
+    titulo: 'API gratis con NVIDIA Build',
+    descripcion: 'Consigue acceso gratuito a modelos de IA por API con NVIDIA Build.',
+    categoria: 'Recursos',
+    fecha: '2026-07-01',
+    archivo: '/guias/nvidia-build-free-api.pdf',
+    reel: {
+      titulo: 'API gratis con NVIDIA',
+      thumb: '/images/reels/nvidia.jpg',
+    },
+  },
+  {
     id: 'record-replay-codex',
     titulo: 'Record & Replay en Codex',
     descripcion: 'Cómo grabar y repetir tus acciones con Record & Replay en Codex.',
