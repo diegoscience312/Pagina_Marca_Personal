@@ -308,6 +308,18 @@ export const guias = [
 
   // ── Recursos ─────────────────────────────────────────────────────────────
   {
+    id: 'guia-fable-the-grid',
+    titulo: 'System Prompt de Claude Fable 5',
+    descripcion: 'Cómo mejorar cualquier modelo de IA usando los principios del System Prompt de Claude Fable 5.',
+    categoria: 'Recursos',
+    fecha: '2026-07-04',
+    archivo: '/guias/guia-fable-the-grid.pdf',
+    reel: {
+      titulo: 'System Prompt de Fable 5',
+      thumb: '/images/reels/fable5.jpg',
+    },
+  },
+  {
     id: 'nvidia-build-free-api',
     titulo: 'API gratis con NVIDIA Build',
     descripcion: 'Consigue acceso gratuito a modelos de IA por API con NVIDIA Build.',
