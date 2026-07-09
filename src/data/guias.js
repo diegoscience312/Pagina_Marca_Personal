@@ -263,6 +263,14 @@ export const guias = [
     archivo: '/guias/guia-5-prompts-de-claude-para-optimizar-tu-cv-ortegoat.pdf',
   },
   {
+    id: 'prompts-claude-finanzas',
+    titulo: '6 Prompts de Claude para tus finanzas',
+    descripcion: 'Convierte a Claude en tu asesor financiero personal: diagnóstico, deudas, presupuesto y más.',
+    categoria: 'Negocio',
+    fecha: '2026-07-08',
+    archivo: '/guias/prompts-claude-finanzas.pdf',
+  },
+  {
     id: 'cv-imposible-de-rechazar',
     titulo: 'Haz tu CV imposible de rechazar',
     descripcion: 'Cómo usar Claude para crear un CV que destaque y sea imposible de rechazar.',
