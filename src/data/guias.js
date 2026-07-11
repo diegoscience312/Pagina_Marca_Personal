@@ -63,6 +63,14 @@ export const guias = [
     archivo: '/guias/5-skills-claude-the-grid.pdf',
   },
   {
+    id: '5-skills-claude-code',
+    titulo: '5 skills de Claude Code que cambian tu flujo',
+    descripcion: 'Las 5 skills de Claude Code que de verdad cambian tu flujo de trabajo: cómo instalarlas, casos de uso y links directos.',
+    categoria: 'Claude Code',
+    fecha: '2026-07-10',
+    archivo: '/guias/guia-5-skills-claude-code.pdf',
+  },
+  {
     id: 'guia-claudecode-skills',
     titulo: 'Cómo crear Skills en Claude Code',
     descripcion: 'Crea y usa tus propias skills personalizadas en Claude Code.',
