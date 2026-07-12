@@ -144,6 +144,14 @@ export const guias = [
     archivo: '/guias/como-configurar-claude-cowork.pdf',
   },
   {
+    id: 'guia-gstack',
+    titulo: 'gstack: el setup del CEO de Y Combinator',
+    descripcion: 'El setup de Claude Code de Garry Tan: 23 roles que trabajan como un equipo de ingeniería completo, de la idea al PR.',
+    categoria: 'Claude Code',
+    fecha: '2026-07-12',
+    archivo: '/guias/guia-gstack.pdf',
+  },
+  {
     id: 'claude-council',
     titulo: 'Claude Council',
     descripcion: 'Cómo usar Claude Council para que varios Claude debatan y mejoren tus respuestas.',
