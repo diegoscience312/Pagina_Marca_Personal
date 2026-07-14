@@ -332,6 +332,14 @@ export const guias = [
 
   // ── Recursos ─────────────────────────────────────────────────────────────
   {
+    id: 'aprende-habilidad-3-horas',
+    titulo: 'Aprende cualquier habilidad en 3 horas con Claude',
+    descripcion: '6 prompts que convierten a Claude en tu tutor personal: aprende más rápido, detecta tus vacíos y practica con situaciones reales.',
+    categoria: 'Recursos',
+    fecha: '2026-07-13',
+    archivo: '/guias/aprende-cualquier-habilidad-3-horas-claude.pdf',
+  },
+  {
     id: 'guia-fable-the-grid',
     titulo: 'System Prompt de Claude Fable 5',
     descripcion: 'Cómo mejorar cualquier modelo de IA usando los principios del System Prompt de Claude Fable 5.',
