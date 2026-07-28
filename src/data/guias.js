@@ -295,6 +295,14 @@ export const guias = [
     archivo: '/guias/hacer-tu-cv-imposible-de-rechazar.pdf',
     destacada: true,
   },
+  {
+    id: '5-prompts-conseguir-entrevista',
+    titulo: '5 Prompts para conseguir la entrevista',
+    descripcion: '5 prompts de Claude para prepararte, destacar y conseguir la entrevista que quieres.',
+    categoria: 'Negocio',
+    fecha: '2026-07-27',
+    archivo: '/guias/5-prompts-conseguir-entrevista-ortegoat.pdf',
+  },
 
   // ── Diseño & Web ─────────────────────────────────────────────────────────
   {
