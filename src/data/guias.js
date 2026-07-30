@@ -303,6 +303,14 @@ export const guias = [
     fecha: '2026-07-27',
     archivo: '/guias/5-prompts-conseguir-entrevista-ortegoat.pdf',
   },
+  {
+    id: 'claudemd-karpathy',
+    titulo: 'CLAUDE.md al estilo Karpathy',
+    descripcion: 'Cómo estructurar tu CLAUDE.md siguiendo el enfoque de Andrej Karpathy para sacarle el máximo a Claude Code.',
+    categoria: 'Claude Code',
+    fecha: '2026-07-29',
+    archivo: '/guias/claudemd-karpathy-guia.pdf',
+  },
 
   // ── Diseño & Web ─────────────────────────────────────────────────────────
   {
