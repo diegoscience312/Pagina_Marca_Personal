@@ -314,6 +314,14 @@ export const guias = [
 
   // ── Diseño & Web ─────────────────────────────────────────────────────────
   {
+    id: 'prompts-ia-rediseno-espacios',
+    titulo: 'Prompts IA para rediseño de espacios',
+    descripcion: 'Guía de prompts para usar IA y rediseñar interiores y espacios con resultados profesionales.',
+    categoria: 'Diseño & Web',
+    fecha: '2026-08-01',
+    archivo: '/guias/prompts-ia-rediseno-espacios.pdf',
+  },
+  {
     id: 'claude-blender',
     titulo: 'Claude + Blender',
     descripcion: 'Usa Claude para crear y automatizar en Blender (3D).',
