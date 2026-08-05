@@ -356,6 +356,15 @@ export const guias = [
 
   // ── Recursos ─────────────────────────────────────────────────────────────
   {
+    id: 'swaps-20-alternativas-gratis',
+    titulo: 'Swaps: 20 alternativas gratis a herramientas de IA de pago',
+    descripcion: 'Por cada herramienta de IA de pago, una alternativa gratis que le sirve a la mayoría. 20 swaps para dejar de pagar de más.',
+    categoria: 'Recursos',
+    fecha: '2026-08-05',
+    archivo: '/guias/swaps-20-alternativas-gratis.pdf',
+    destacada: true,
+  },
+  {
     id: 'aprende-habilidad-3-horas',
     titulo: 'Aprende cualquier habilidad en 3 horas con Claude',
     descripcion: '6 prompts que convierten a Claude en tu tutor personal: aprende más rápido, detecta tus vacíos y practica con situaciones reales.',
