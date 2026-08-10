@@ -29,6 +29,15 @@ export const categorias = ['Claude Code', 'Contenido', 'Negocio', 'Diseño & Web
 export const guias = [
   // ── Claude Code ──────────────────────────────────────────────────────────
   {
+    id: 'jarvis-os-guia',
+    titulo: 'Arma tu Jarvis OS',
+    descripcion: 'Guía completa paso a paso para construir tu propio asistente de voz sobre Claude Code, con herramientas reales, en un fin de semana.',
+    categoria: 'Claude Code',
+    fecha: '2026-08-10',
+    archivo: '/guias/jarvis-os-guia.pdf',
+    destacada: true,
+  },
+  {
     id: '21-herramientas-claude',
     titulo: '21 herramientas para Claude',
     descripcion: 'Nivel top 1%: 21 skills y conectores para Claude, qué hace cada uno y cómo se instala.',
