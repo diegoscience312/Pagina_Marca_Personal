@@ -29,6 +29,15 @@ export const categorias = ['Claude Code', 'Contenido', 'Negocio', 'Diseño & Web
 export const guias = [
   // ── Claude Code ──────────────────────────────────────────────────────────
   {
+    id: '21-herramientas-claude',
+    titulo: '21 herramientas para Claude',
+    descripcion: 'Nivel top 1%: 21 skills y conectores para Claude, qué hace cada uno y cómo se instala.',
+    categoria: 'Claude Code',
+    fecha: '2026-08-09',
+    archivo: '/guias/21-herramientas-claude.pdf',
+    destacada: true,
+  },
+  {
     id: 'mejores-practicas-claude',
     titulo: 'Mejores prácticas de Claude',
     descripcion: 'Consejos y buenas prácticas para sacarle el máximo provecho a Claude.',
