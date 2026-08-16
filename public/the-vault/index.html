@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Vault — AI Community</title>
+  <meta name="description" content="Comunidad privada para aprender a usar IA para construir y monetizar. Únete a la lista de espera y recibe mi blueprint gratis." />
+  <link rel="icon" type="image/png" href="/the-vault/imagenes/the-vault-onda-2048.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Vault — AI Community" />
+  <meta property="og:description" content="Convierte la IA en tu ventaja para construir y monetizar. Únete a la lista de espera y recibe mi blueprint gratis." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ortegoat.com/the-vault/imagenes/the-vault-onda-2048.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Vault — AI Community" />
+  <meta name="twitter:description" content="Convierte la IA en tu ventaja para construir y monetizar. Únete a la lista de espera y recibe mi blueprint gratis." />
+  <meta name="twitter:image" content="https://ortegoat.com/the-vault/imagenes/the-vault-onda-2048.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #08060a;
+      --bg-soft: #0f0c10;
+      --card: rgba(255, 255, 255, 0.03);
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #f5f2f0;
+      --muted: #a09a97;
+      --gold: #f26a4b;
+      --gold-soft: #ff8a66;
+      --accent: #ff6a3d;
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    /* Ambient glow background */
+    .bg-glow {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(600px circle at 15% 10%, rgba(255, 106, 61, 0.16), transparent 55%),
+        radial-gradient(700px circle at 85% 20%, rgba(242, 106, 75, 0.12), transparent 55%),
+        radial-gradient(600px circle at 50% 100%, rgba(255, 138, 102, 0.10), transparent 60%);
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Nav / brand */
+    header {
+      padding: 34px 0 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+    }
+    .brand .logo {
+      height: 82px;
+      width: auto;
+      margin-left: -14px;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+    .brand .mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: linear-gradient(145deg, rgba(212,175,55,0.22), rgba(124,92,255,0.22));
+      border: 1px solid var(--border);
+      font-size: 20px;
+    }
+    .brand span b { color: var(--gold-soft); }
+    .brand small {
+      display: block;
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 70px 0 30px;
+      text-align: center;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 15px;
+      border-radius: 999px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 26px;
+    }
+    .pill .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 10px 1px var(--gold);
+    }
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 3.5rem);
+      line-height: 1.1;
+      font-weight: 600;
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+    h1 .grad {
+      background: linear-gradient(120deg, var(--gold-soft), #fff 45%, var(--gold));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .lead {
+      font-size: clamp(1.05rem, 2.4vw, 1.22rem);
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto 14px;
+    }
+
+    /* Buttons */
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin-top: 34px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 28px;
+      border-radius: 13px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform .18s ease, box-shadow .25s ease, background .25s ease;
+      cursor: pointer;
+    }
+    .btn-primary {
+      color: #14110a;
+      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+      box-shadow: 0 10px 30px -8px rgba(212, 175, 55, 0.55);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px -10px rgba(212, 175, 55, 0.7);
+    }
+    .btn-primary .arrow { transition: transform .2s ease; }
+    .btn-primary:hover .arrow { transform: translateX(4px); }
+    .btn-ghost {
+      color: var(--text);
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.06); transform: translateY(-2px); }
+
+    /* Section */
+    section.block {
+      padding: 46px 0;
+    }
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+      font-weight: 600;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    h2 {
+      font-size: clamp(1.6rem, 4vw, 2.1rem);
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 12px;
+      letter-spacing: -1px;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 40px;
+    }
+
+    /* Feature grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+    }
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 22px;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .feature:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212,175,55,0.35);
+      background: rgba(255,255,255,0.05);
+    }
+    .feature .ico {
+      width: 44px; height: 44px;
+      display: grid; place-items: center;
+      border-radius: 12px;
+      font-size: 22px;
+      background: linear-gradient(145deg, rgba(124,92,255,0.18), rgba(212,175,55,0.14));
+      border: 1px solid var(--border);
+      margin-bottom: 15px;
+    }
+    .feature h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      margin-bottom: 6px;
+    }
+    .feature p {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    /* Founding members card */
+    .founders {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+      background: linear-gradient(150deg, rgba(255,106,61,0.12), rgba(255,138,102,0.05));
+      border: 1px solid rgba(255,138,102,0.35);
+      border-radius: 22px;
+      padding: 44px 34px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .founders::before {
+      content: "";
+      position: absolute;
+      top: -50%; left: 50%;
+      transform: translateX(-50%);
+      width: 340px; height: 340px;
+      background: radial-gradient(circle, rgba(255,106,61,0.22), transparent 65%);
+      pointer-events: none;
+    }
+    .founders .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255,106,61,0.14);
+      border: 1px solid rgba(255,138,102,0.4);
+      color: var(--gold-soft);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .founders h2 { text-align: center; }
+    .founders p {
+      position: relative;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 8px;
+    }
+    .founders .highlight { color: var(--gold-soft); font-weight: 600; }
+
+    /* Final CTA */
+    .final {
+      text-align: center;
+      padding: 30px 0 20px;
+    }
+
+    /* Trust bar (hero) */
+    .trustbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 34px;
+      margin-top: 40px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+    .trustbar .tstat { text-align: center; }
+    .trustbar .tnum {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text);
+    }
+    .trustbar .tnum b { color: var(--gold-soft); }
+    .trustbar .tlbl {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .trustbar .tlbl a { color: var(--gold-soft); text-decoration: none; }
+    .trustbar .tlbl a:hover { text-decoration: underline; }
+    .trustbar .tsep {
+      width: 1px;
+      height: 34px;
+      background: var(--border);
+    }
+
+    /* Social proof — growth */
+    .proof {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .growth {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 20px;
+    }
+    .growth figure {
+      margin: 0;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px;
+      overflow: hidden;
+    }
+    .growth figure img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+    .growth figcaption {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 4px 4px;
+    }
+    .growth figcaption .when {
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .growth figcaption .val {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .growth .arrow-mid {
+      width: 44px; height: 44px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      display: grid; place-items: center;
+      background: rgba(255,106,61,0.14);
+      border: 1px solid rgba(255,138,102,0.4);
+      color: var(--gold-soft);
+      font-size: 20px;
+    }
+    .proof .caption {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 22px;
+    }
+    .proof .caption b { color: var(--gold-soft); font-weight: 600; }
+    .proof .skool-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      color: var(--gold-soft);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .proof .skool-link:hover { text-decoration: underline; }
+
+    .proof .skool-card {
+      display: block;
+      max-width: 230px;
+      margin: 26px auto 0;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 12px;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .proof .skool-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,138,102,0.4);
+    }
+    .proof .skool-card img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    /* Monetization proof */
+    .money {
+      max-width: 720px;
+      margin: 44px auto 0;
+      text-align: center;
+    }
+    .money .money-stat {
+      font-size: clamp(2.2rem, 6vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      background: linear-gradient(120deg, var(--gold-soft), var(--gold));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+    }
+    .money .money-sub {
+      color: var(--muted);
+      font-size: 0.98rem;
+      max-width: 460px;
+      margin: 8px auto 0;
+    }
+    .payments {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 26px;
+    }
+    .payments figure {
+      margin: 0;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 10px;
+      overflow: hidden;
+    }
+    .payments figure.full {
+      grid-column: 1 / -1;
+      max-width: calc(42% - 7px);
+      margin: 0 auto;
+      width: 100%;
+    }
+    .payments .pay-img {
+      display: block;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+    .payments .pay-img img {
+      width: 100%;
+      display: block;
+      transition: transform .25s ease;
+    }
+    .payments .pay-img:hover img { transform: scale(1.03); }
+    .payments .pay-img::after {
+      content: "🔍 Ampliar";
+      position: absolute;
+      bottom: 6px; right: 6px;
+      font-size: 0.68rem;
+      color: var(--text);
+      background: rgba(0,0,0,0.55);
+      padding: 2px 8px;
+      border-radius: 999px;
+      opacity: 0;
+      transition: opacity .2s ease;
+    }
+    .payments .pay-img:hover::after { opacity: 1; }
+    .payments figcaption {
+      font-size: 0.78rem;
+      color: var(--muted);
+      padding: 10px 2px 0;
+      text-align: center;
+    }
+    @media (max-width: 560px) {
+      .payments { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .growth {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .growth .arrow-mid { transform: rotate(90deg); margin: 0 auto; }
+    }
+
+    /* Gift / lead magnet block */
+    .gift {
+      position: relative;
+      display: grid;
+      grid-template-columns: 96px 1fr auto;
+      align-items: center;
+      gap: 26px;
+      max-width: 720px;
+      margin: 0 auto;
+      background: linear-gradient(150deg, rgba(255,106,61,0.12), rgba(255,138,102,0.05));
+      border: 1px solid rgba(255,138,102,0.35);
+      border-radius: 22px;
+      padding: 32px 34px;
+      overflow: hidden;
+    }
+    .gift::before {
+      content: "";
+      position: absolute;
+      top: -60%; right: -10%;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(255,106,61,0.22), transparent 65%);
+      pointer-events: none;
+    }
+    .gift .giftbox {
+      position: relative;
+      width: 96px; height: 96px;
+      border-radius: 18px;
+      display: grid; place-items: center;
+      background: rgba(255,106,61,0.14);
+      border: 1px solid rgba(255,138,102,0.4);
+      font-size: 44px;
+    }
+    .gift .tag {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .gift h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+    .gift p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin: 0;
+      max-width: 420px;
+    }
+    .gift .cta { position: relative; }
+
+    @media (max-width: 680px) {
+      .gift {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+        padding: 30px 24px;
+      }
+      .gift p { margin: 0 auto; }
+    }
+
+    /* Editorial numbered list — "¿Qué vas a encontrar?" */
+    .topics {
+      max-width: 720px;
+      margin: 0 auto;
+      border-top: 1px solid var(--border);
+    }
+    .topics .row {
+      display: flex;
+      align-items: baseline;
+      gap: 22px;
+      padding: 22px 4px;
+      border-bottom: 1px solid var(--border);
+      transition: padding-left .2s ease;
+    }
+    .topics .row:hover { padding-left: 12px; }
+    .topics .num {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 1px;
+      min-width: 28px;
+      font-variant-numeric: tabular-nums;
+    }
+    .topics .row h3 {
+      font-size: 1.12rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      margin-bottom: 3px;
+    }
+    .topics .row p {
+      font-size: 0.93rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* Audience checklist — "¿Para quién es?" */
+    .audience {
+      max-width: 720px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 30px;
+    }
+    .audience .item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .audience .check {
+      flex-shrink: 0;
+      width: 24px; height: 24px;
+      margin-top: 2px;
+      border-radius: 50%;
+      display: grid; place-items: center;
+      background: rgba(255,106,61,0.14);
+      border: 1px solid rgba(255,138,102,0.4);
+      color: var(--gold-soft);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .audience .item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+      letter-spacing: -0.2px;
+    }
+    .audience .item p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* About me */
+    .about {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 26px;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 32px 34px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .about .photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255,138,102,0.4);
+      box-shadow: 0 10px 30px -12px rgba(255,106,61,0.45);
+    }
+    .about .name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.4px;
+      margin-bottom: 3px;
+    }
+    .about .role {
+      color: var(--gold-soft);
+      font-weight: 500;
+      font-size: 0.88rem;
+      margin-bottom: 12px;
+    }
+    .about p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin: 0;
+    }
+    .about p strong { color: var(--text); font-weight: 600; }
+
+    /* FAQ */
+    .faq { max-width: 680px; margin: 0 auto; }
+    .faq details {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 4px 22px;
+      margin-bottom: 12px;
+      transition: border-color .2s ease, background .2s ease;
+    }
+    .faq details[open] {
+      border-color: rgba(255,138,102,0.35);
+      background: rgba(255,255,255,0.04);
+    }
+    .faq summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 0;
+      font-weight: 500;
+      font-size: 1.02rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary .plus {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      position: relative;
+      transition: transform .25s ease;
+      color: var(--gold-soft);
+    }
+    .faq summary .plus::before,
+    .faq summary .plus::after {
+      content: "";
+      position: absolute;
+      background: currentColor;
+      border-radius: 2px;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .faq summary .plus::before { width: 14px; height: 2px; }
+    .faq summary .plus::after { width: 2px; height: 14px; transition: transform .25s ease; }
+    .faq details[open] summary .plus::after { transform: translate(-50%, -50%) rotate(90deg); opacity: 0; }
+    .faq details p {
+      color: var(--muted);
+      padding: 0 0 18px;
+      font-size: 0.96rem;
+      margin: 0;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 40px 0 50px;
+      border-top: 1px solid var(--border);
+      margin-top: 30px;
+    }
+    footer b { color: var(--gold-soft); }
+    footer .socials { margin-bottom: 14px; }
+    footer .socials a {
+      color: var(--gold-soft);
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 10px;
+    }
+    footer .socials a:hover { color: var(--text); }
+
+    @media (max-width: 620px) {
+      .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+        padding: 30px 24px;
+      }
+      .audience { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .btn { width: 100%; justify-content: center; }
+      .founders { padding: 40px 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <div class="wrap">
+    <!-- Brand -->
+    <header>
+      <div class="brand">
+        <img class="logo" src="/the-vault/imagenes/the-vault-onda-2048.png" alt="The Vault — AI Community" />
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="pill"><span class="dot"></span> Pre-lanzamiento · Solo 50 lugares fundadores</div>
+      <h1>Convierte la IA en tu ventaja para <span class="grad">construir y monetizar</span></h1>
+      <p class="lead">
+        Una comunidad privada para aprender a usar la inteligencia artificial y
+        crear proyectos reales que generan ingresos. Durante el pre-lanzamiento
+        trabajaré junto a un grupo reducido de
+        <strong style="color:var(--text)">miembros fundadores</strong> para construir
+        la primera versión juntos.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://tally.so/r/eqGJJx" target="_blank" rel="noopener">
+          Quiero conocer más <span class="arrow">→</span>
+        </a>
+        <a class="btn btn-ghost" href="#contenido">Ver qué incluye</a>
+      </div>
+
+      <div class="trustbar">
+        <div class="tstat">
+          <div class="tnum"><b>+38K</b></div>
+          <div class="tlbl"><a href="https://instagram.com/ortegoat" target="_blank" rel="noopener">seguidores en @ortegoat</a></div>
+        </div>
+        <div class="tsep"></div>
+        <div class="tstat">
+          <div class="tnum"><b>+$4K USD</b></div>
+          <div class="tlbl">cash collected con IA</div>
+        </div>
+        <div class="tsep"></div>
+        <div class="tstat">
+          <div class="tnum"><b>+1.7K</b></div>
+          <div class="tlbl"><a href="https://www.skool.com/the-grid-5633/about" target="_blank" rel="noopener">en mi comunidad gratis</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="block" id="contenido">
+      <div class="eyebrow">Dentro de la comunidad</div>
+      <h2>¿Qué vas a encontrar?</h2>
+      <p class="section-sub">Todo lo que necesitas para pasar de la teoría a proyectos que generan resultados.</p>
+
+      <div class="topics">
+        <div class="row">
+          <div class="num">01</div>
+          <div>
+            <h3>IA aplicada a marca personal</h3>
+            <p>Crea contenido y posiciona tu marca usando inteligencia artificial.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="num">02</div>
+          <div>
+            <h3>IA para negocios</h3>
+            <p>Aplica la IA para vender más, ahorrar tiempo y escalar tu negocio.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="num">03</div>
+          <div>
+            <h3>Automatizaciones y workflows</h3>
+            <p>Diseña flujos de trabajo que hacen el trabajo pesado por ti.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="num">04</div>
+          <div>
+            <h3>Construcción de proyectos con IA</h3>
+            <p>Construye apps, herramientas y productos reales, paso a paso.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="num">05</div>
+          <div>
+            <h3>Estrategias para monetizar tus habilidades</h3>
+            <p>Convierte lo que aprendes en ingresos con un plan claro.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ¿Para quién es? -->
+    <section class="block">
+      <div class="eyebrow">Hecho para ti</div>
+      <h2>¿Para quién es?</h2>
+      <p class="section-sub">Si te ves en alguno de estos perfiles, The Vault es tu lugar.</p>
+
+      <div class="audience">
+        <div class="item">
+          <div class="check">✓</div>
+          <div>
+            <h3>Emprendedores</h3>
+            <p>Quieres usar la IA para crecer tu negocio y automatizar procesos.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="check">✓</div>
+          <div>
+            <h3>Creadores de contenido</h3>
+            <p>Buscas potenciar tu marca personal y crear más rápido con IA.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="check">✓</div>
+          <div>
+            <h3>Curiosos de la IA</h3>
+            <p>Empiezas desde cero y quieres una guía clara, sin humo.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="check">✓</div>
+          <div>
+            <h3>Profesionales y freelancers</h3>
+            <p>Quieres monetizar tus habilidades y sumar la IA a tu oferta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section class="block" id="sobre-mi">
+      <div class="eyebrow">Quién está detrás</div>
+      <h2>Sobre mí</h2>
+      <p class="section-sub">La persona que va a construir esto contigo.</p>
+
+      <div class="about">
+        <img class="photo" src="/the-vault/imagenes/profile.png" alt="Diego Ortega — ortegoat" />
+        <div>
+          <div class="name">Diego Ortega</div>
+          <div class="role">Ingeniero en Ciencia de Datos · @ortegoat +38K · Agencia de IA</div>
+          <p>
+            Llevo años aplicando la IA a proyectos y negocios reales. Comparto todo lo
+            que aprendo con mi comunidad en <strong>@ortegoat</strong> y dirijo mi propia
+            <strong> agencia de IA</strong>. The Vault nace para reunir ese conocimiento
+            en un solo lugar, junto a personas que quieren construir y monetizar con IA.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prueba social / crecimiento -->
+    <section class="block" id="prueba">
+      <div class="eyebrow">Esto no es teoría</div>
+      <h2>Lo apliqué en mí primero</h2>
+      <p class="section-sub">El mismo sistema que vas a aprender es el que usé para crecer @ortegoat.</p>
+
+      <div class="proof">
+        <div class="growth">
+          <figure>
+            <img src="/the-vault/imagenes/69.jpg" alt="Perfil de @ortegoat en marzo con 69 seguidores" />
+            <figcaption>
+              <span class="when">El comienzo</span>
+              <span class="val">69 seguidores</span>
+            </figcaption>
+          </figure>
+          <div class="arrow-mid">→</div>
+          <figure>
+            <img src="/the-vault/imagenes/38k.jpg" alt="Perfil de @ortegoat hoy con 38.2K seguidores" />
+            <figcaption>
+              <span class="when">Hoy</span>
+              <span class="val">38.2K seguidores</span>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="caption">
+          De <b>69 a +38.200 seguidores</b> y <b>1.9M de vistas al mes</b>, aplicando IA a mi
+          marca personal. Y ya construí una comunidad gratis con <b>+1.7K personas</b>.
+          <br />
+          <a class="skool-link" href="https://www.skool.com/the-grid-5633/about" target="_blank" rel="noopener">
+            Compruébalo en The Grid, mi comunidad en Skool →
+          </a>
+        </p>
+        <a class="skool-card" href="https://www.skool.com/the-grid-5633/about" target="_blank" rel="noopener">
+          <img src="/the-vault/imagenes/skool.png" alt="The Grid en Skool — 1.7k miembros" />
+        </a>
+
+        <div class="money">
+          <div class="money-stat">+$4,000 USD</div>
+          <p class="money-sub">
+            generados aplicando IA: consultorías, clientes de mi agencia y
+            colaboraciones de marcas que llegaron por mi crecimiento en IG.
+          </p>
+          <div class="payments">
+            <figure>
+              <a class="pay-img" href="/the-vault/imagenes/agencia.png" target="_blank" rel="noopener">
+                <img src="/the-vault/imagenes/agencia.png" alt="Pagos de clientes de mi agencia de IA" />
+              </a>
+              <figcaption>Clientes de mi agencia de IA</figcaption>
+            </figure>
+            <figure>
+              <a class="pay-img" href="/the-vault/imagenes/consultoria.png" target="_blank" rel="noopener">
+                <img src="/the-vault/imagenes/consultoria.png" alt="Pagos de consultorías 1 a 1" />
+              </a>
+              <figcaption>Consultorías 1 a 1 con creadores</figcaption>
+            </figure>
+            <figure class="full">
+              <a class="pay-img" href="/the-vault/imagenes/ig.png" target="_blank" rel="noopener">
+                <img src="/the-vault/imagenes/ig.png" alt="Colaboraciones de marcas gracias a mi crecimiento en IG" />
+              </a>
+              <figcaption>Colaboraciones de marcas por crecer en IG</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Regalo / lead magnet -->
+    <section class="block" id="regalo">
+      <div class="gift">
+        <div class="giftbox">🎁</div>
+        <div>
+          <span class="tag">Regalo de bienvenida</span>
+          <h3>Mi blueprint de IA, gratis</h3>
+          <p>
+            Al unirte a la lista de espera recibes el sistema completo de cómo uso
+            la IA en mi marca personal y en mi negocio. Listo para aplicar.
+          </p>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://tally.so/r/eqGJJx" target="_blank" rel="noopener">
+            Lo quiero <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founding Members -->
+    <section class="block">
+      <div class="founders">
+        <div class="badge">★ Solo 50 lugares</div>
+        <h2>Sé de los primeros 50</h2>
+        <p>
+          El <span class="highlight">precio fundador</span> es exclusivo para las
+          <span class="highlight">primeras 50 personas</span>. Será un precio accesible
+          y quedará bloqueado para siempre mientras mantengas tu membresía.
+        </p>
+        <p>Cuando se llenen los 50 lugares, el precio sube. Es tu recompensa por estar desde el día uno.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://tally.so/r/eqGJJx" target="_blank" rel="noopener">
+            Quiero mi lugar fundador <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="block" id="faq">
+      <div class="eyebrow">Dudas frecuentes</div>
+      <h2>Preguntas frecuentes</h2>
+      <p class="section-sub">Todo lo que necesitas saber antes de unirte.</p>
+
+      <div class="faq">
+        <details>
+          <summary>¿Necesito saber de IA para entrar? <span class="plus"></span></summary>
+          <p>Para nada. La comunidad está pensada tanto para quienes empiezan desde cero como para quienes ya usan IA y quieren llevarla al siguiente nivel. Vamos paso a paso.</p>
+        </details>
+        <details>
+          <summary>¿Cuándo abre la comunidad? <span class="plus"></span></summary>
+          <p>Estamos en pre-lanzamiento. Los miembros fundadores entran primero para construir la primera versión juntos. Al dejar tus datos te aviso las fechas exactas antes que nadie.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto va a costar? <span class="plus"></span></summary>
+          <p>Será un precio accesible. Las primeras 50 personas obtienen el precio fundador, que queda bloqueado para siempre mientras mantengan su membresía. Cuando se llenan esos lugares, el precio sube.</p>
+        </details>
+        <details>
+          <summary>¿Qué incluye la membresía? <span class="plus"></span></summary>
+          <p>Acceso a la comunidad privada, contenido sobre IA aplicada a marca personal y negocios, automatizaciones, construcción de proyectos y estrategias de monetización, además de acompañamiento cercano.</p>
+        </details>
+        <details>
+          <summary>¿Cómo dejo mis datos? <span class="plus"></span></summary>
+          <p>Solo haz clic en cualquiera de los botones "Quiero conocer más". Te lleva a un formulario rápido y yo me pongo en contacto contigo con toda la información.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final">
+      <h2>¿Listo para empezar?</h2>
+      <p class="section-sub">Únete a la lista de espera, recibe tu blueprint gratis y te cuento todos los detalles antes que nadie.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://tally.so/r/eqGJJx" target="_blank" rel="noopener">
+          Quiero conocer más <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="socials">
+        <a href="https://instagram.com/ortegoat" target="_blank" rel="noopener">@ortegoat</a>
+      </div>
+      © 2026 <b>The Vault</b> · AI Community · Creada por Diego Ortega
+    </footer>
+  </div>
+</body>
+</html>

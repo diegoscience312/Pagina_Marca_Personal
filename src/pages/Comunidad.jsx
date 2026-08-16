@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import ParticleBackground from '../components/ParticleBackground'
-import { openBlueprint } from '../data/blueprint'
 import ToolIcon from '../components/ToolIcon'
 import Avatar from '../components/Avatar'
 import SocialLinks from '../components/SocialLinks'
@@ -187,7 +186,7 @@ export default function Comunidad() {
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: '0 0 28px rgba(245,158,11,0.55)' }}
                 whileTap={{ scale: 0.95 }}
-                onClick={openBlueprint}
+                onClick={() => { window.location.href = '/the-vault/' }}
                 className="w-full text-center px-6 py-3 rounded-xl text-sm font-bold text-black cursor-pointer mt-auto"
                 style={{
                   background: 'linear-gradient(135deg, #fbbf24, #f97316)',
