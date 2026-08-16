@@ -775,11 +775,14 @@
       .btn { width: 100%; justify-content: center; }
       .founders { padding: 40px 22px; }
 
-      /* Logo más pequeño y centrado, menos espacio con el hero */
-      header { padding: 20px 0 0; }
-      .brand { justify-content: center; }
-      .brand .logo { height: 52px; margin-left: 0; }
-      .hero { padding: 28px 0 20px; }
+      /* Reducir ligeramente todo el contenido en móvil */
+      body { zoom: 0.92; }
+
+      /* Logo un poco más grande y pegado a la derecha */
+      header { padding: 18px 0 0; }
+      .brand { justify-content: flex-end; }
+      .brand .logo { height: 70px; margin-left: 0; margin-right: -10px; }
+      .hero { padding: 26px 0 20px; }
 
       /* Trust bar: apilado limpio, sin rayas colgando */
       .trustbar {
