@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Document, Page, pdfjs } from 'react-pdf'
+import { BlueprintFloating } from './BlueprintCTA'
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
 
@@ -101,6 +102,9 @@ export default function PdfViewer({ guia, onClose }) {
               </button>
             </div>
           </div>
+
+          {/* CTA persistente — barra arriba (móvil) + tarjeta lateral (desktop) */}
+          <BlueprintFloating />
 
           {/* Área del documento */}
           <div

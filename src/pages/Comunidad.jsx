@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import ParticleBackground from '../components/ParticleBackground'
+import { openBlueprint } from '../data/blueprint'
 import ToolIcon from '../components/ToolIcon'
 import Avatar from '../components/Avatar'
 import SocialLinks from '../components/SocialLinks'
@@ -57,57 +58,18 @@ export default function Comunidad() {
         <motion.div {...fadeUp(0.12)} className="w-full mb-8 flex flex-col items-center">
           <p className="text-[10px] md:text-xs text-white/40 uppercase tracking-[0.2em] text-center mb-8 font-bold">IMPARTIDO POR:</p>
           
-          <div className="relative flex flex-col md:flex-row justify-center md:items-stretch w-full max-w-[850px] gap-12 md:gap-0">
-            
-            {/* Dividing Vertical Line and Clockwise Spinning & (Desktop) */}
-            <div className="hidden md:flex absolute left-1/2 top-[10%] bottom-[10%] w-[1px] bg-white/10 -translate-x-1/2 z-0 items-center justify-center">
-              <motion.div
-                className="bg-[#0a0a0a] w-8 h-8 flex items-center justify-center text-white/30 font-serif text-sm select-none"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
-              >
-                &
-              </motion.div>
-            </div>
-
-            {/* Dividing Horizontal Line and Clockwise Spinning & (Mobile) */}
-            <div className="flex md:hidden absolute top-1/2 left-[10%] right-[10%] h-[1px] bg-white/10 -translate-y-1/2 z-0 items-center justify-center">
-              <motion.div
-                className="bg-[#0a0a0a] px-2 flex items-center justify-center text-white/30 font-serif text-sm select-none"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
-              >
-                &
-              </motion.div>
-            </div>
-
-            {/* Left Col - Diego */}
-            <div className="flex-1 flex flex-col items-center text-center px-4">
-              <Avatar name="Diego Ortega" delay={0} small />
-              <p className="text-xl md:text-[22px] font-bold text-white mt-5 mb-1 tracking-wide">Diego Ortega</p>
-              <p className="text-sm text-white/50 mb-5 max-w-[180px] leading-relaxed">
-                Agencia IA & Automatización
-              </p>
-              <SocialLinks
-                instagram="@ortegoat"
-                tiktok="@ortegoat8"
-                instagramUrl="https://instagram.com/ortegoat"
-                tiktokUrl="https://tiktok.com/@ortegoat8"
-              />
-            </div>
-
-            {/* Right Col - Mateo */}
-            <div className="flex-1 flex flex-col items-center text-center px-4 relative">
-              <Avatar name="Mateo Cerrillo" delay={0.2} small />
-              <p className="text-xl md:text-[22px] font-bold text-white mt-5 mb-1 tracking-wide">Mateo Cerrillo</p>
-              <p className="text-sm text-white/50 mb-5 max-w-[180px] leading-relaxed">
-                Contenido UGC, Videos &<br/>Claude Code
-              </p>
-              <SocialLinks
-                instagram="@cerrillolife"
-                instagramUrl="https://instagram.com/cerrillolife"
-              />
-            </div>
+          <div className="flex flex-col items-center text-center px-4">
+            <Avatar name="Diego Ortega" delay={0} small />
+            <p className="text-xl md:text-[22px] font-bold text-white mt-5 mb-1 tracking-wide">Diego Ortega</p>
+            <p className="text-sm text-white/50 mb-5 max-w-[220px] leading-relaxed">
+              Agencia IA & Automatización
+            </p>
+            <SocialLinks
+              instagram="@ortegoat"
+              tiktok="@ortegoat8"
+              instagramUrl="https://instagram.com/ortegoat"
+              tiktokUrl="https://tiktok.com/@ortegoat8"
+            />
           </div>
         </motion.div>
 
@@ -196,10 +158,16 @@ export default function Comunidad() {
               </div>
 
               <div className="mb-3">
-                <span className="text-[10px] font-bold text-violet-400 uppercase tracking-widest">Premium</span>
+                <span className="inline-flex items-center gap-1.5 text-[10px] font-black text-amber-300 uppercase tracking-widest">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse shadow-[0_0_8px_rgba(245,158,11,0.9)]" />
+                  Pre-lanzamiento
+                </span>
                 <h2 className="text-lg font-bold text-white mt-1">Comunidad PRO</h2>
                 <p className="text-xs text-white/50 mt-1 leading-relaxed">
                   Acceso completo a clases en vivo, mentorías directas, flujos de automatización listos para usar y mucho más.
+                </p>
+                <p className="text-[11px] text-amber-200/80 mt-2 leading-relaxed font-semibold">
+                  🔥 Se viene el pre-lanzamiento. Entra a la lista de espera para acceso anticipado y precio de fundador.
                 </p>
               </div>
               <ul className="flex flex-col gap-2 mb-5 flex-1">
@@ -216,15 +184,19 @@ export default function Comunidad() {
                   </li>
                 ))}
               </ul>
-              <motion.div
-                className="w-full text-center px-6 py-3 rounded-xl text-sm font-bold text-white/60 cursor-not-allowed mt-auto"
+              <motion.button
+                whileHover={{ scale: 1.05, boxShadow: '0 0 28px rgba(245,158,11,0.55)' }}
+                whileTap={{ scale: 0.95 }}
+                onClick={openBlueprint}
+                className="w-full text-center px-6 py-3 rounded-xl text-sm font-bold text-black cursor-pointer mt-auto"
                 style={{
-                  background: 'rgba(139,92,246,0.1)',
-                  border: '1px solid rgba(139,92,246,0.2)',
+                  background: 'linear-gradient(135deg, #fbbf24, #f97316)',
+                  boxShadow: '0 0 18px rgba(245,158,11,0.4)',
+                  border: '1px solid rgba(255,255,255,0.15)',
                 }}
               >
-                Próximamente
-              </motion.div>
+                Quiero acceso anticipado →
+              </motion.button>
             </div>
           </motion.div>
         </div>
