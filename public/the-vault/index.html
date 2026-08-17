@@ -506,6 +506,181 @@
       .payments figure.full { max-width: 100%; }
     }
 
+    /* ── Elige tu camino — mapa de niveles estilo videojuego ── */
+    .journey {
+      position: relative;
+      max-width: 700px;
+      margin: 6px auto 0;
+    }
+    .level {
+      position: relative;
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 22px;
+      padding-bottom: 44px;
+    }
+    .level:last-child { padding-bottom: 0; }
+    /* la línea del "camino" que conecta los niveles */
+    .level::before {
+      content: "";
+      position: absolute;
+      left: 28px;
+      top: 50px;
+      bottom: -4px;
+      width: 4px;
+      transform: translateX(-50%);
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,138,102,0.7) 0 8px,
+        transparent 8px 18px
+      );
+      border-radius: 4px;
+    }
+    .level:last-child::before { display: none; }
+
+    .checkpoint {
+      position: relative;
+      z-index: 1;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--gold-soft);
+      background: #14100e;
+      border: 2px solid rgba(255,138,102,0.55);
+      box-shadow: 0 0 0 6px rgba(255,106,61,0.05), 0 0 22px rgba(255,106,61,0.28);
+      animation: cpPulse 2.8s ease-in-out infinite;
+    }
+    .checkpoint.boss {
+      color: #14110a;
+      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+      border-color: transparent;
+      box-shadow: 0 0 0 6px rgba(255,106,61,0.12), 0 0 34px rgba(255,106,61,0.6);
+      font-size: 1.5rem;
+    }
+    @keyframes cpPulse {
+      0%, 100% { box-shadow: 0 0 0 6px rgba(255,106,61,0.05), 0 0 22px rgba(255,106,61,0.28); }
+      50%      { box-shadow: 0 0 0 11px rgba(255,106,61,0.09), 0 0 32px rgba(255,106,61,0.5); }
+    }
+
+    .pathcard {
+      position: relative;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px 24px;
+      transition: transform .2s ease, border-color .2s ease, box-shadow .25s ease;
+    }
+    .pathcard:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,138,102,0.35);
+    }
+    .pathcard.pro {
+      background: linear-gradient(150deg, rgba(255,106,61,0.13), rgba(255,138,102,0.04));
+      border-color: rgba(255,138,102,0.45);
+      box-shadow: 0 0 45px -14px rgba(255,106,61,0.5);
+    }
+    .pathcard .lvl-tag {
+      display: inline-block;
+      font-size: 10.5px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .pathcard.pro .lvl-tag { color: var(--gold-soft); }
+    .pathcard .pc-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .pathcard h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.4px;
+    }
+    .pathcard .price {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--gold-soft);
+      white-space: nowrap;
+    }
+    .pathcard .pc-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 6px 0 14px;
+    }
+    .path-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin: 0 0 18px;
+    }
+    .path-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+    .path-list li .ck {
+      flex-shrink: 0;
+      margin-top: 1px;
+      color: var(--gold-soft);
+      font-weight: 700;
+    }
+    .path-list li.muted { color: var(--muted); }
+    .pathcard .btn { width: 100%; justify-content: center; }
+    .pathcard .btn-ghost.free:hover { border-color: rgba(255,138,102,0.4); }
+
+    /* Cinta "Recomendado" */
+    .ribbon {
+      position: absolute;
+      top: 16px;
+      right: -6px;
+      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+      color: #14110a;
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 6px 0 0 6px;
+      box-shadow: 0 6px 16px -6px rgba(255,106,61,0.7);
+    }
+    .you-here {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .you-here .blip {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 10px 1px var(--gold);
+      animation: cpPulse 2s ease-in-out infinite;
+    }
+
+    @media (max-width: 560px) {
+      .level { grid-template-columns: 46px 1fr; gap: 16px; }
+      .level::before { left: 23px; top: 46px; }
+      .checkpoint { width: 46px; height: 46px; font-size: 1rem; }
+      .checkpoint.boss { font-size: 1.25rem; }
+      .pathcard { padding: 20px; }
+    }
+
     @media (max-width: 560px) {
       .growth {
         grid-template-columns: 1fr;
@@ -888,23 +1063,6 @@
         </a>
         <a class="btn btn-ghost" href="#contenido">Ver qué incluye</a>
       </div>
-
-      <div class="trustbar">
-        <div class="tstat">
-          <div class="tnum"><b>+38K</b></div>
-          <div class="tlbl"><a href="https://instagram.com/ortegoat" target="_blank" rel="noopener">seguidores en @ortegoat</a></div>
-        </div>
-        <div class="tsep"></div>
-        <div class="tstat">
-          <div class="tnum"><b>+$4K USD</b></div>
-          <div class="tlbl">cash collected con IA</div>
-        </div>
-        <div class="tsep"></div>
-        <div class="tstat">
-          <div class="tnum"><b>+1.7K</b></div>
-          <div class="tlbl"><a href="https://www.skool.com/the-grid-5633/about" target="_blank" rel="noopener">en mi comunidad gratis</a></div>
-        </div>
-      </div>
     </section>
 
     <!-- Features -->
@@ -1014,39 +1172,10 @@
     <!-- Prueba social / crecimiento -->
     <section class="block reveal" id="prueba">
       <div class="eyebrow">Esto no es teoría</div>
-      <h2>Lo apliqué en mí primero</h2>
-      <p class="section-sub">El mismo sistema que vas a aprender es el que usé para crecer @ortegoat.</p>
+      <h2>Resultados reales, con pruebas</h2>
+      <p class="section-sub">No te vendo humo: esto es lo que la IA ya genera cuando se aplica bien.</p>
 
       <div class="proof">
-        <div class="growth">
-          <figure>
-            <img src="/the-vault/imagenes/69.jpg" alt="Perfil de @ortegoat en marzo con 69 seguidores" />
-            <figcaption>
-              <span class="when">El comienzo</span>
-              <span class="val">69 seguidores</span>
-            </figcaption>
-          </figure>
-          <div class="arrow-mid">→</div>
-          <figure>
-            <img src="/the-vault/imagenes/38k.jpg" alt="Perfil de @ortegoat hoy con 38.2K seguidores" />
-            <figcaption>
-              <span class="when">Hoy</span>
-              <span class="val">38.2K seguidores</span>
-            </figcaption>
-          </figure>
-        </div>
-        <p class="caption">
-          De <b>69 a +38.200 seguidores</b> y <b>1.9M de vistas al mes</b>, aplicando IA a mi
-          marca personal. Y ya construí una comunidad gratis con <b>+1.7K personas</b>.
-          <br />
-          <a class="skool-link" href="https://www.skool.com/the-grid-5633/about" target="_blank" rel="noopener">
-            Compruébalo en The Grid, mi comunidad en Skool →
-          </a>
-        </p>
-        <a class="skool-card" href="https://www.skool.com/the-grid-5633/about" target="_blank" rel="noopener">
-          <img src="/the-vault/imagenes/skool.png" alt="The Grid en Skool — 1.7k miembros" />
-        </a>
-
         <div class="money">
           <div class="money-stat">+$4,000 USD</div>
           <p class="money-sub">
@@ -1074,6 +1203,65 @@
             </figure>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Elige tu camino -->
+    <section class="block reveal" id="camino">
+      <div class="eyebrow">Tu aventura con IA</div>
+      <h2>Elige tu camino</h2>
+      <p class="section-sub">Empieza gratis o sube de nivel al camino PRO. Tú decides hasta dónde llegar.</p>
+
+      <div class="journey reveal-stagger">
+
+        <!-- Nivel 1: Gratis -->
+        <div class="level">
+          <div class="checkpoint">1</div>
+          <div class="pathcard">
+            <span class="lvl-tag">Nivel 1 · Empieza aquí</span>
+            <div class="pc-head">
+              <h3>Comunidad Libre</h3>
+              <span class="price">Gratis</span>
+            </div>
+            <p class="pc-desc">The Grid — mi comunidad abierta con +1.7K personas aprendiendo IA.</p>
+            <ul class="path-list">
+              <li><span class="ck">✓</span> Acceso a la comunidad en Skool</li>
+              <li><span class="ck">✓</span> Recursos y plantillas gratis</li>
+              <li><span class="ck">✓</span> Tips semanales de IA</li>
+              <li><span class="ck">✓</span> Una comunidad activa de +1.7K miembros</li>
+            </ul>
+            <a class="btn btn-ghost free" href="https://www.skool.com/the-grid-5633" target="_blank" rel="noopener">
+              Únete gratis <span class="arrow">→</span>
+            </a>
+            <div class="you-here"><span class="blip"></span> Tú estás aquí</div>
+          </div>
+        </div>
+
+        <!-- Nivel 2: PRO -->
+        <div class="level">
+          <div class="checkpoint boss">👑</div>
+          <div class="pathcard pro">
+            <span class="ribbon">Recomendado</span>
+            <span class="lvl-tag">Nivel 2 · La meta</span>
+            <div class="pc-head">
+              <h3>The Vault PRO</h3>
+              <span class="price">Precio fundador</span>
+            </div>
+            <p class="pc-desc">El camino completo para construir y monetizar con IA, con acompañamiento cercano.</p>
+            <ul class="path-list">
+              <li><span class="ck">✦</span> Todo lo de la comunidad libre</li>
+              <li><span class="ck">✦</span> IA aplicada a marca personal y negocios</li>
+              <li><span class="ck">✦</span> Automatizaciones y workflows PRO</li>
+              <li><span class="ck">✦</span> Proyectos con IA paso a paso</li>
+              <li><span class="ck">✦</span> Estrategias para monetizar tus habilidades</li>
+              <li><span class="ck">✦</span> Precio fundador bloqueado para siempre</li>
+            </ul>
+            <a class="btn btn-primary" href="https://tally.so/r/eqGJJx" target="_blank" rel="noopener">
+              Quiero mi lugar fundador <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
 
