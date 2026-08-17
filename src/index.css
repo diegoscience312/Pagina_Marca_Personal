@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,6 +47,17 @@
 
   .text-gradient {
     background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .font-display {
+    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  }
+
+  .text-gradient-coral {
+    background: linear-gradient(135deg, #ff8a66, #ff5e33);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
