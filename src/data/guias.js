@@ -27,6 +27,17 @@
 export const categorias = ['Claude Code', 'Contenido', 'Negocio', 'Diseño & Web', 'Recursos']
 
 export const guias = [
+  // ── Contenido ────────────────────────────────────────────────────────────
+  {
+    id: 'un-post-todas-partes',
+    titulo: 'Un post, todas partes',
+    descripcion: 'Publica en tus 13 redes desde una sola conversación con Claude, sin copiar y pegar. Con Claude Code + Zernio, paso a paso.',
+    categoria: 'Contenido',
+    fecha: '2026-08-17',
+    archivo: '/guias/un-post-todas-partes-guia.pdf',
+    destacada: true,
+  },
+
   // ── Claude Code ──────────────────────────────────────────────────────────
   {
     id: 'jarvis-os-guia',
