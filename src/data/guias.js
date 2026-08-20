@@ -385,6 +385,15 @@ export const guias = [
 
   // ── Recursos ─────────────────────────────────────────────────────────────
   {
+    id: 'agente-voz-xai-guia',
+    titulo: 'Construye un agente de voz con xAI',
+    descripcion: 'Arma un agente de voz sobre Grok Voice de xAI, paso a paso: la ruta sin código (demo en ~2 min) y la ruta por API para developers, con precios y checklist final.',
+    categoria: 'Recursos',
+    fecha: '2026-08-19',
+    archivo: '/guias/agente-voz-xai-guia.pdf',
+    destacada: true,
+  },
+  {
     id: 'swaps-20-alternativas-gratis',
     titulo: 'Swaps: 20 alternativas gratis a herramientas de IA de pago',
     descripcion: 'Por cada herramienta de IA de pago, una alternativa gratis que le sirve a la mayoría. 20 swaps para dejar de pagar de más.',
