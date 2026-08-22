@@ -385,6 +385,15 @@ export const guias = [
 
   // ── Recursos ─────────────────────────────────────────────────────────────
   {
+    id: 'jarvis-guia',
+    titulo: 'Arma tu JARVIS',
+    descripcion: 'Construye tu propio agente personal en un fin de semana: 9 pasos con comandos reales, desde darle un hogar 24/7 hasta memoria persistente, skills, canales y voz.',
+    categoria: 'Recursos',
+    fecha: '2026-08-22',
+    archivo: '/guias/jarvis-guia.pdf',
+    destacada: true,
+  },
+  {
     id: 'agente-voz-xai-guia',
     titulo: 'Construye un agente de voz con xAI',
     descripcion: 'Arma un agente de voz sobre Grok Voice de xAI, paso a paso: la ruta sin código (demo en ~2 min) y la ruta por API para developers, con precios y checklist final.',
