@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { openBlueprint } from '../data/blueprint'
 
 // Copy compartida del lead magnet (en primera persona, voz de Diego)
-const HOOK = '¿Te gustaría empezar a monetizar con IA?'
-const DESC = 'Te comparto las 3 formas en las que monetizo mi marca personal y mi negocio con IA, el mismo sistema que uso yo.'
-const CTA_LABEL = 'Quiero el video gratis →'
+const HOOK = '¿Quieres llegar a tu primer ingreso con IA?'
+const DESC = 'Te comparto mi Roadmap: los 3 pasos exactos para llevar cualquier idea con IA hasta tu primer ingreso — con rutas, prompts listos para copiar y guiones para conseguir tus primeros clientes.'
+const CTA_LABEL = 'Quiero la guía gratis →'
 
 // Botón coral-naranja (identidad The Vault)
 const vaultBtn = {
@@ -85,8 +85,8 @@ export function BlueprintStrip() {
 
       <span className="flex items-center gap-2 min-w-0 relative z-10 text-left">
         <span className="text-[12px] md:text-sm font-bold text-white truncate">
-          💰 Video <span className="text-[#ff8a66]">GRATIS</span> para monetizar con IA
-          <span className="hidden sm:inline text-orange-100/60 font-medium"> · 3 formas que uso yo</span>
+          💰 Guía <span className="text-[#ff8a66]">GRATIS</span>: de idea a tu primer ingreso con IA
+          <span className="hidden sm:inline text-orange-100/60 font-medium"> · mi Roadmap paso a paso</span>
         </span>
       </span>
 
@@ -205,7 +205,7 @@ export function BlueprintFloating() {
             className="hidden md:flex fixed top-20 right-6 z-[60] items-center gap-2 px-4 py-2 rounded-full text-xs font-bold text-black cursor-pointer shadow-2xl"
             style={vaultBtn}
           >
-            💰 Video gratis
+            💰 Guía gratis
           </motion.button>
         )}
       </AnimatePresence>
@@ -223,7 +223,7 @@ export function BlueprintFloating() {
             className="md:hidden fixed bottom-4 right-4 z-[60] flex items-center gap-1.5 px-3.5 py-2 rounded-full text-[12px] font-bold text-black cursor-pointer shadow-2xl"
             style={vaultBtn}
           >
-            💰 Video gratis
+            💰 Guía gratis
           </motion.button>
         )}
       </AnimatePresence>
