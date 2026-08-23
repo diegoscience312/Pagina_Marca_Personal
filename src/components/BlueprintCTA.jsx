@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { openBlueprint } from '../data/blueprint'
 
 // Copy compartida del lead magnet (en primera persona, voz de Diego)
-const HOOK = '¿Quieres llegar a tu primer ingreso con IA?'
-const DESC = 'Te comparto mi Roadmap: los 3 pasos exactos para llevar cualquier idea con IA hasta tu primer ingreso — con rutas, prompts listos para copiar y guiones para conseguir tus primeros clientes.'
+const TITLE = 'Roadmap: De ideación a tus primeros ingresos con IA'
+const DESC = 'Las 3 mejores rutas para empezar, cómo validar tu oferta, construir tu MVP y 4 métodos para conseguir tus primeros clientes.'
 const CTA_LABEL = 'Quiero la guía gratis →'
 
 // Botón coral-naranja (identidad The Vault)
@@ -42,7 +42,7 @@ export function BlueprintBanner({ className = '' }) {
 
         <div className="text-left relative z-10 flex-1">
           <p className="text-[15px] md:text-base font-bold text-white leading-snug mb-1">
-            💰 {HOOK}
+            💰 {TITLE}
           </p>
           <p className="text-[12px] md:text-[13px] leading-snug text-orange-100/60 font-medium">
             {DESC}
@@ -83,10 +83,12 @@ export function BlueprintStrip() {
       {/* sweep */}
       <div className="absolute top-0 left-[-100%] w-[200%] h-full bg-gradient-to-r from-transparent via-white/[0.05] to-transparent skew-x-[-20deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out pointer-events-none" />
 
-      <span className="flex items-center gap-2 min-w-0 relative z-10 text-left">
-        <span className="text-[12px] md:text-sm font-bold text-white truncate">
-          💰 Guía <span className="text-[#ff8a66]">GRATIS</span>: de idea a tu primer ingreso con IA
-          <span className="hidden sm:inline text-orange-100/60 font-medium"> · mi Roadmap paso a paso</span>
+      <span className="flex flex-col min-w-0 relative z-10 text-left leading-tight">
+        <span className="text-[14px] md:text-[15px] font-extrabold uppercase text-[#ff8a66] mb-0.5">
+          Guía gratis
+        </span>
+        <span className="text-[12px] md:text-sm font-bold text-white">
+          💰 {TITLE}
         </span>
       </span>
 
@@ -128,7 +130,7 @@ export function BlueprintFloating() {
           >
             <div className="flex items-center gap-2 px-3 py-2">
               <div className="flex-1 min-w-0">
-                <p className="text-[12px] font-bold text-white leading-snug">💰 {HOOK}</p>
+                <p className="text-[12px] font-bold text-white leading-snug">💰 {TITLE}</p>
                 <p className="text-[11px] text-orange-100/60 leading-snug mt-0.5">{DESC}</p>
                 <p className="text-[10px] text-orange-100/45 leading-snug mt-1 font-medium">6 preguntas · menos de 2 min · <span className="font-bold text-[#ff8a66]">GRATIS</span></p>
               </div>
@@ -178,7 +180,7 @@ export function BlueprintFloating() {
             </button>
 
             <p className="text-sm font-bold text-white leading-snug mb-1.5 pr-6">
-              💰 {HOOK}
+              💰 {TITLE}
             </p>
             <p className="text-[13px] text-orange-100/65 leading-relaxed mb-3">
               {DESC}
