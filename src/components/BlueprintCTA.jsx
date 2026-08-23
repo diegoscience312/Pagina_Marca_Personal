@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { openBlueprint } from '../data/blueprint'
 
 // Copy compartida del lead magnet (en primera persona, voz de Diego)
-const TITLE = 'Roadmap: De ideación a tus primeros ingresos con IA'
+const TITLE = 'Roadmap: De la idea a tus primeros ingresos con IA'
 const DESC = 'Las 3 mejores rutas para empezar, cómo validar tu oferta, construir tu MVP y 4 métodos para conseguir tus primeros clientes.'
 const CTA_LABEL = 'Quiero la guía gratis →'
 
