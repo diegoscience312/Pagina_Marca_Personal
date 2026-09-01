@@ -192,6 +192,15 @@ export const guias = [
 
   // ── Contenido ────────────────────────────────────────────────────────────
   {
+    id: 'guia-10-prompts-claude-contenido',
+    titulo: '10 Prompts de Claude para contenido',
+    descripcion: 'Copia y pega: 10 prompts para generar ideas, espiar a la competencia y crear contenido con tu propia voz, no genérico.',
+    categoria: 'Contenido',
+    fecha: '2026-08-31',
+    archivo: '/guias/guia-10-prompts-claude-contenido.pdf',
+    destacada: true,
+  },
+  {
     id: 'claude-canva',
     titulo: 'Claude + Canva',
     descripcion: 'Genera diseños y contenido combinando Claude con Canva.',
