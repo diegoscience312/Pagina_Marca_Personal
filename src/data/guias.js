@@ -394,6 +394,15 @@ export const guias = [
 
   // ── Recursos ─────────────────────────────────────────────────────────────
   {
+    id: 'notebooklm-claude-skills',
+    titulo: 'Claude piensa como tu creador favorito',
+    descripcion: 'Carga el conocimiento de un canal de YouTube en NotebookLM y conviértelo en una Skill de Claude que responde con el criterio de ese creador. Paso a paso.',
+    categoria: 'Recursos',
+    fecha: '2026-09-07',
+    archivo: '/guias/notebooklm-claude-skills.pdf',
+    destacada: true,
+  },
+  {
     id: 'jarvis-guia',
     titulo: 'Arma tu JARVIS',
     descripcion: 'Construye tu propio agente personal en un fin de semana: 9 pasos con comandos reales, desde darle un hogar 24/7 hasta memoria persistente, skills, canales y voz.',
