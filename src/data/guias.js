@@ -394,6 +394,15 @@ export const guias = [
 
   // ── Recursos ─────────────────────────────────────────────────────────────
   {
+    id: 'prompts-sistemas-vida-claude',
+    titulo: 'Ordena tu vida con Claude: 4 sistemas en un fin de semana',
+    descripcion: '4 prompts para que Claude Code construya y publique 4 apps web personales: panel de vida, agenda, correo y tareas. Cada una es independiente.',
+    categoria: 'Recursos',
+    fecha: '2026-10-17',
+    archivo: '/guias/prompts_sistemas_vida_claude.pdf',
+    destacada: true,
+  },
+  {
     id: 'notebooklm-claude-skills',
     titulo: 'Claude piensa como tu creador favorito',
     descripcion: 'Carga el conocimiento de un canal de YouTube en NotebookLM y conviértelo en una Skill de Claude que responde con el criterio de ese creador. Paso a paso.',
