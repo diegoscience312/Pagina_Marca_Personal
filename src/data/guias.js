@@ -394,6 +394,15 @@ export const guias = [
 
   // ── Recursos ─────────────────────────────────────────────────────────────
   {
+    id: 'replica-skill',
+    titulo: 'Réplica Skill: 4 apps para clonar con Claude Code',
+    descripcion: '11 skills gratuitas que analizan, reconstruyen y lanzan un clon de cualquier app con tu propia marca. Incluye 4 casos de uso paso a paso: Link in bio, Agendado de citas, Formularios y CRM ligero.',
+    categoria: 'Claude Code',
+    fecha: '2026-10-20',
+    archivo: '/guias/guia_replica_skill.pdf',
+    destacada: true,
+  },
+  {
     id: 'prompts-sistemas-vida-claude',
     titulo: 'Ordena tu vida con Claude: 4 sistemas en un fin de semana',
     descripcion: '4 prompts para que Claude Code construya y publique 4 apps web personales: panel de vida, agenda, correo y tareas. Cada una es independiente.',
