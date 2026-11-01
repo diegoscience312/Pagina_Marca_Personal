@@ -27,6 +27,17 @@
 export const categorias = ['Claude Code', 'Contenido', 'Negocio', 'Diseño & Web', 'Recursos']
 
 export const guias = [
+  // ── Recursos ───────────────────────────────────────────────────────────
+  {
+    id: 'prompts-dieta-claude',
+    titulo: 'Prompts: Dieta y Rutina con Claude',
+    descripcion: 'Prompts listos para que Claude te arme un plan de alimentación y rutina de ejercicio personalizado, con tus datos reales.',
+    categoria: 'Recursos',
+    fecha: '2026-10-31',
+    archivo: '/guias/prompts_dieta_claude.pdf',
+    destacada: true,
+  },
+
   // ── Contenido ────────────────────────────────────────────────────────────
   {
     id: 'un-post-todas-partes',
