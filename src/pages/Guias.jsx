@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState, Suspense, lazy } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import ParticleBackground from '../components/ParticleBackground'
-import { BlueprintBanner } from '../components/BlueprintCTA'
 import { guias, categorias } from '../data/guias'
 
 // El visor (react-pdf) se descarga solo cuando se abre una guía
@@ -100,11 +99,6 @@ export default function Guias() {
         >
           ← Volver
         </motion.button>
-
-        {/* CTA — Blueprint / captación de leads (arriba de todo) */}
-        <div className="mb-6">
-          <BlueprintBanner />
-        </div>
 
         {/* Header */}
         <motion.div {...fadeUp(0.1)} className="text-center mb-7">

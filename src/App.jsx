@@ -4,7 +4,6 @@ import ParticleBackground from './components/ParticleBackground'
 import Avatar from './components/Avatar'
 import SocialLinks from './components/SocialLinks'
 import ContentCard from './components/ContentCard'
-import { BlueprintStrip } from './components/BlueprintCTA'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -78,11 +77,6 @@ export default function App() {
                 linkedinUrl="https://www.linkedin.com/in/diego-ortega-castellanos-436b2b210/"
               />
             </div>
-          </motion.div>
-
-          {/* ── BLUEPRINT STRIP (banner delgado) ── */}
-          <motion.div variants={itemVariants} className="w-full max-w-xl mx-auto">
-            <BlueprintStrip />
           </motion.div>
 
           {/* ── AGENCY CARD ── */}
